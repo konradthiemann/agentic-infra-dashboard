@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Agentic Infra Dashboard
 
-## Getting Started
+Meta-Dashboard über Konrads KI-Agentik-Engineering-Infrastruktur: Repos unter
+`~/Softwareentwicklung`, globale Claude-Code-Agents/Skills/Rules/Hooks, die
+Abläufe, die sie bilden, und ein einfaches Monitoring (TDD-Gate-Blocks,
+CI-Status je Repo). Reine Visualisierung — kein Business-/Umsatz-Dashboard
+(das ist [`control-plane`](https://github.com/konradthiemann/control-plane)).
 
-First, run the development server:
+## Stack
+
+Next.js (App Router) · TypeScript strict · Tailwind CSS · Vitest + Testing Library
+
+## Wie die Daten aktuell bleiben
+
+Kurzfassung — Details in [`CLAUDE.md`](./CLAUDE.md) und [`specs/dashboard.md`](./specs/dashboard.md):
+
+1. `scripts/generate-snapshot.ts` scannt lokal (Repos, `~/.claude/*`,
+   TDD-Gate-Logs) und schreibt `snapshot.json`.
+2. Ein globaler Claude-Code-Hook (`~/.claude/hooks/infra-dashboard-sync.sh`)
+   ruft das bei relevanten Änderungen automatisch auf und pusht das Ergebnis
+   auf einen separaten, bot-only `data`-Branch dieses Repos — `main` bleibt
+   für App-Code beim normalen PR-Workflow.
+3. Die App liest `snapshot.json` zur Laufzeit per `fetch` von diesem
+   `data`-Branch (raw GitHub Content, `revalidate`-gesteuert) — kein
+   Redeploy pro Datenupdate nötig.
+
+## Setup
 
 ```bash
+npm install
+cp .env.example .env.local   # optional, Defaults funktionieren ohne Anpassung
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ohne erreichbaren `data`-Branch (z. B. lokal vor dem ersten Sync) fällt die
+App im Dev-Modus automatisch auf `fixtures/snapshot.sample.json` zurück.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev         # Dev-Server
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+npm run ci           # lint + typecheck + test + build
+npm run snapshot     # Snapshot lokal neu generieren (nur sinnvoll auf Konrads Mac)
+```
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Railway, Service `agentic-infra-dashboard`, deployt automatisch bei Push auf
+`main` mit grüner CI. Keine Secrets nötig.
