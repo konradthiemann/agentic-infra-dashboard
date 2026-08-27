@@ -1,0 +1,997 @@
+{
+  "generatedAt": "2026-08-27T08:58:15.571Z",
+  "workspace": {
+    "repoCount": 12,
+    "agentCount": 8,
+    "skillCount": 7
+  },
+  "repos": [
+    {
+      "slug": "Doewe",
+      "name": "Doewe",
+      "role": "Familien-Finanz-App (Referenz-Setup, eigene .claude/)",
+      "stack": [
+        "Next.js 14",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+        "Railway"
+      ],
+      "githubUrl": "https://github.com/konradthiemann/Doewe",
+      "deployTarget": "Railway",
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": true,
+      "lastCommit": {
+        "sha": "b3206c663bd05f18c94dc2c7f5536e3ac229c90f",
+        "message": "Merge pull request #70 from konradthiemann/docs/document-admin-crm-api",
+        "date": "2026-08-26T15:11:31+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-26T13:16:10Z",
+        "url": "https://github.com/konradthiemann/Doewe/actions/runs/32972952129"
+      }
+    },
+    {
+      "slug": "Foto-Challenge",
+      "name": "Foto-Challenge",
+      "role": "Foto-Challenge-App (\"Knips\") — live, Nixpacks-Deploy",
+      "stack": [
+        "Node"
+      ],
+      "githubUrl": "https://github.com/konradthiemann/Foto-Challenge",
+      "deployTarget": "GitHub Pages / Nixpacks",
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": true,
+      "lastCommit": {
+        "sha": "7111e72b9248ef67e5d257510dd7db76905d7b74",
+        "message": "Merge pull request #20 from konradthiemann/docs/spec-weighted-task-selection",
+        "date": "2026-08-27T09:09:49+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-27T07:11:00Z",
+        "url": "https://github.com/konradthiemann/Foto-Challenge/actions/runs/33048599798"
+      }
+    },
+    {
+      "slug": "Pok-mon-TCG-Prize-Checker",
+      "name": "Pok-mon-TCG-Prize-Checker",
+      "role": "App",
+      "stack": [
+        "React",
+        "Vite",
+        "Supabase",
+        "TypeScript"
+      ],
+      "githubUrl": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker",
+      "deployTarget": null,
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": true,
+      "lastCommit": {
+        "sha": "cc7ed7e4919be9a00155db5a44e8700e9bd37efc",
+        "message": "chore: repo-hygiene baseline (CI, LICENSE, env-example, editorconfig) (#1)",
+        "date": "2026-08-20T14:53:54+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-20T12:54:18Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/32371254341"
+      }
+    },
+    {
+      "slug": "Pokekon",
+      "name": "Pokekon",
+      "role": "Full-Stack-App",
+      "stack": [
+        "TypeScript",
+        "eigene API"
+      ],
+      "githubUrl": "https://github.com/konradthiemann/Pokekon",
+      "deployTarget": null,
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": true,
+      "lastCommit": {
+        "sha": "fc85ec21731fdfcec3c88e69271f0938d5e91c4f",
+        "message": "Merge pull request #40 from konradthiemann/chore/agent-memory-copilot-config",
+        "date": "2026-08-04T16:12:12+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": {
+        "workflow": "Dependabot Updates",
+        "status": "completed",
+        "conclusion": "failure",
+        "updatedAt": "2026-08-17T04:25:04Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/31994349758"
+      }
+    },
+    {
+      "slug": "Waldbingo",
+      "name": "Waldbingo",
+      "role": "App",
+      "stack": [
+        "TypeScript"
+      ],
+      "githubUrl": "https://github.com/konradthiemann/Waldbingo",
+      "deployTarget": null,
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": false,
+      "lastCommit": {
+        "sha": "28d32eab347d2fdfd4e0fbd9426e87ad74ae0e18",
+        "message": "chore: add hygiene baseline (.env.example, .editorconfig) (#6)",
+        "date": "2026-08-20T14:54:07+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-20T12:54:47Z",
+        "url": "https://github.com/konradthiemann/Waldbingo/actions/runs/32371272907"
+      }
+    },
+    {
+      "slug": "agentic-infra-dashboard",
+      "name": "agentic-infra-dashboard",
+      "role": "Dieses Dashboard selbst — Meta-Übersicht der Agentik-Infrastruktur",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "githubUrl": "https://github.com/konradthiemann/agentic-infra-dashboard",
+      "deployTarget": "Railway",
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": true,
+      "lastCommit": {
+        "sha": "dd61d11fd520d90dd6c8e4c1d275fa2c835c0083",
+        "message": "fix(rules): strip frontmatter and inline markdown from rule summaries",
+        "date": "2026-08-27T10:46:49+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-27T08:56:58Z",
+        "url": "https://github.com/konradthiemann/agentic-infra-dashboard/actions/runs/33056215345"
+      }
+    },
+    {
+      "slug": "bilderraetsel",
+      "name": "bilderraetsel",
+      "role": "App",
+      "stack": [
+        "Node",
+        "DB (seed)"
+      ],
+      "githubUrl": "https://github.com/konradthiemann/bilderraetsel",
+      "deployTarget": null,
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": false,
+      "lastCommit": {
+        "sha": "9e1444e6bf068ff205a0190e60c0660bf6cc25ba",
+        "message": "chore: add CLAUDE.md and .editorconfig (#3)",
+        "date": "2026-08-20T14:54:13+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-20T12:54:29Z",
+        "url": "https://github.com/konradthiemann/bilderraetsel/actions/runs/32371281471"
+      }
+    },
+    {
+      "slug": "control-plane",
+      "name": "control-plane",
+      "role": "Admin/Ops-Backend — aggregiert Einnahmen, GitHub-Issues und App-Analytics für Konrads Apps",
+      "stack": [
+        "PHP 8.5",
+        "Symfony 7",
+        "Doctrine ORM",
+        "PostgreSQL",
+        "Symfony UX",
+        "FrankenPHP"
+      ],
+      "githubUrl": "https://github.com/konradthiemann/control-plane",
+      "deployTarget": "Railway",
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": true,
+      "lastCommit": {
+        "sha": "2a04b7caf9de18773ae13eeab074791299fc3c1c",
+        "message": "Merge pull request #17 from konradthiemann/feat/responsive-dashboard",
+        "date": "2026-08-27T09:10:42+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-27T07:11:25Z",
+        "url": "https://github.com/konradthiemann/control-plane/actions/runs/33048660393"
+      }
+    },
+    {
+      "slug": "geburtstag-karaoke",
+      "name": "geburtstag-karaoke",
+      "role": "Einmaliges Event-Projekt (Karaoke-Slideshow)",
+      "stack": [
+        "Static HTML/JS"
+      ],
+      "githubUrl": "https://github.com/konradthiemann/geburtstag-karaoke",
+      "deployTarget": null,
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": false,
+      "lastCommit": {
+        "sha": "dd43ecad8edfb4f6f6e52de1250d9e4f316c938f",
+        "message": "Bilder im Originalformat, dynamische Bilderliste, Audio im Repo",
+        "date": "2026-08-20T11:58:50+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": null
+    },
+    {
+      "slug": "gmail-mcp",
+      "name": "gmail-mcp",
+      "role": "Lokaler, safe-by-design Gmail-MCP-Server für Claude Code (kein permanentes Löschen, kein Senden)",
+      "stack": [
+        "Node",
+        "MCP"
+      ],
+      "githubUrl": null,
+      "deployTarget": "lokal (kein Deploy)",
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": false,
+      "lastCommit": {
+        "sha": "58230aa027b8bb121a7bcad0681753de295943aa",
+        "message": "feat: add gmail_bulk_archive for mass inbox cleanup",
+        "date": "2026-08-21T07:04:20+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": null
+    },
+    {
+      "slug": "notes-mcp",
+      "name": "notes-mcp",
+      "role": "Lokaler, safe-by-design Apple-Notes-MCP-Server für Claude Code (JXA/AppleScript)",
+      "stack": [
+        "Node",
+        "MCP",
+        "JXA"
+      ],
+      "githubUrl": null,
+      "deployTarget": "lokal (kein Deploy)",
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": false,
+      "lastCommit": {
+        "sha": "c4b24be5d7603744bc97c5fd62f0c2a794f8c70c",
+        "message": "chore: scaffold Softwareentwicklung-scoped Apple Notes MCP server",
+        "date": "2026-08-21T15:35:38+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": null
+    },
+    {
+      "slug": "portfolio2",
+      "name": "portfolio2",
+      "role": "Portfolio-Frontend",
+      "stack": [
+        "Vue",
+        "Nuxt",
+        "SASS"
+      ],
+      "githubUrl": "https://github.com/konradthiemann/portfolio2",
+      "deployTarget": null,
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": true,
+      "lastCommit": {
+        "sha": "fe2ce0fcac14b8d139c05eb3dc7067c226acd9da",
+        "message": "chore: add repo-hygiene baseline (CLAUDE.md, CI, editorconfig, nvmrc) (#4)",
+        "date": "2026-08-20T14:54:01+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-20T12:54:35Z",
+        "url": "https://github.com/konradthiemann/portfolio2/actions/runs/32371264094"
+      }
+    }
+  ],
+  "agents": [
+    {
+      "name": "data-analyst",
+      "description": "Use to design schema changes, plan migrations, optimize queries, and reason about the data model — Prisma/PostgreSQL today, Doctrine/MySQL likely for the coming PHP backend. Handles the DB layer so features are built on a sound model.",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash",
+        "Write",
+        "Edit"
+      ],
+      "model": "sonnet",
+      "example": "\"Wie migriere ich `users.email` auf `citext` ohne Downtime?\" → data-analyst plant die Migration (Doctrine/Prisma), inkl. Reihenfolge und Rollback-Pfad, schreibt aber keine Feature-Logik."
+    },
+    {
+      "name": "docs",
+      "description": "Use to write, update, or audit documentation — README, CHANGELOG, inline API docs, architecture notes — so docs stay in sync with the code after a change. Keeps the same voice and structure the project already uses.",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "model": "haiku",
+      "example": "Nach einem gemergten Feature: docs aktualisiert README/CHANGELOG und Docblocks, damit sie mit dem tatsächlichen Verhalten übereinstimmen — im bestehenden Ton/Struktur des Projekts."
+    },
+    {
+      "name": "implementer",
+      "description": "Use to write or refactor production code once a plan exists. Implements layer by layer, matches surrounding code, keeps diffs small and focused, and runs the project's quality gates before declaring done.",
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Grep",
+        "Glob",
+        "Bash",
+        "TodoWrite"
+      ],
+      "model": "sonnet",
+      "example": "Nimmt tester's roten Test für `POST /api/scores`, verifiziert den Fehlgrund, implementiert den Endpoint exakt gegen die Plan-Kontrakte, bis der Test grün ist, refactored danach."
+    },
+    {
+      "name": "orchestrator",
+      "description": "Use for any non-trivial request that spans multiple layers (schema/DB + API + UI + tests + docs) or needs coordination across specialists. It decomposes the feature, decides which specialist handles each part, sequences the work, and integrates the results. Start here for multi-file features.",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash",
+        "WebFetch",
+        "WebSearch",
+        "TodoWrite"
+      ],
+      "model": "sonnet",
+      "example": "Konrad: \"Baue ein Punkte-System für Waldbingo, mit DB-Schema, API und UI.\" → orchestrator zerlegt in Schema (data-analyst) → Tests (tester) → Implementierung (implementer) → Review (reviewer) → Docs (docs) und sequenziert die Übergaben."
+    },
+    {
+      "name": "planner",
+      "description": "Use before implementing any non-trivial feature or refactor. Produces a detailed, layer-by-layer implementation plan WITHOUT writing code — affected files, change order, risks, and a Definition of Done. The implementer executes what the planner designs.",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash",
+        "WebFetch",
+        "WebSearch"
+      ],
+      "model": "opus",
+      "example": "Nach einer freigegebenen Spec (specs/punkte-system.md): planner liest sie und liefert Datei-für-Datei-Plan inkl. Interfaces & Contracts (z. B. `POST /api/scores` Request/Response-Shape), damit tester und implementer unabhängig voneinander daran arbeiten können."
+    },
+    {
+      "name": "reviewer",
+      "description": "Use to review a diff, PR, or set of changes for correctness, security, and convention adherence. Catches real defects — not style nitpicks. Read-only; it reports findings, it does not edit.",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+      "model": "sonnet",
+      "example": "Vor dem Merge eines PR: reviewer liest den Diff gegen die Akzeptanzkriterien der Spec und meldet reale Defekte (z. B. fehlende Validierung, falsche Fehlerbehandlung) — schreibt selbst nichts um."
+    },
+    {
+      "name": "security",
+      "description": "Use to audit API routes, auth flows, input handling, secrets, and data exposure for vulnerabilities. Especially before shipping backend endpoints or anything handling user data, payments, or receipts. Read-only; reports findings with severity and fix.",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash",
+        "WebFetch"
+      ],
+      "model": "sonnet",
+      "example": "Vor dem Ausrollen eines neuen `/api/auth/login`-Endpoints: security prüft Auth-Flow, Input-Validierung, Secret-Handling und meldet Findings mit Schweregrad und Fix-Vorschlag."
+    },
+    {
+      "name": "tester",
+      "description": "Use to write tests BEFORE production code exists, from a spec's acceptance criteria and a planner's interface contracts. Confirms each test fails for the right reason (red), then hands off to the implementer to make it pass. Never writes production logic.",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Bash",
+        "Write",
+        "Edit"
+      ],
+      "model": "sonnet",
+      "example": "Aus dem Plan-Kontrakt `POST /api/scores → { points: number }` schreibt tester zuerst den fehlschlagenden Request-Test (Rot), ohne die Implementierung selbst zu schreiben — bestätigt, dass er aus dem richtigen Grund fehlschlägt (404, nicht Syntaxfehler)."
+    }
+  ],
+  "skills": [
+    {
+      "name": "commit",
+      "description": "Erstellt einen Commit im Workspace-Standard — Conventional Commit (type(scope): summary) mit Goal/Why/How-Body und Co-Author-Zeile, als ein fokussierter logischer Schritt. Nutzen, wenn Konrad \"commit\", \"commite das\", \"mach einen Commit\" oder Ähnliches sagt.",
+      "triggerHint": "wenn Konrad \"commit\", \"commite das\", \"mach einen Commit\" oder Ähnliches sagt.",
+      "example": "Konrad: \"commite das\" → prüft git status/diff, teilt in logische Schritte, formatiert als `feat(scores): add points endpoint` mit Goal/Why/How-Body und Co-Author-Zeile."
+    },
+    {
+      "name": "email-brief",
+      "description": "Schreibt eine priorisierte Zusammenfassung von Konrads aktuellem E-Mail-Verkehr (Gmail) — Wichtiges/Handlungsbedarf, relevante Schul-Infos, Antworten auf Bewerbungen, Käufe/Signups eigener Produkte (auch nicht-live), Belege & Finanzen. Nutzen bei \"E-Mail-Zusammenfassung\", \"fass meine Mails zusammen\", \"was ist in meinen Mails wichtig\", \"email brief\", \"Posteingang-Überblick\" oder \"/email-brief\".",
+      "triggerHint": "\"E-Mail-Zusammenfassung\", \"fass meine Mails zusammen\", \"was ist in meinen Mails wichtig\", \"email brief\", \"Posteingang-Überblick\" oder \"/email-brief\".",
+      "example": "Konrad: \"/email-brief\" (oder \"/email-brief 14d\", \"/email-brief bewerbungen\") → liefert priorisierte Gmail-Zusammenfassung: Handlungsbedarf, Schule, Bewerbungen, Verkäufe/Signups, Belege — read-only, nichts wird gesendet oder gelöscht."
+    },
+    {
+      "name": "feature",
+      "description": "Verkettet den kompletten Feature-Ablauf — Spec, Plan, Tests (tester), Implementierung (implementer), Quality-Gates, Review, ggf. Docs — als ein wiederkehrender Fluss statt Einzelschritte manuell aufzurufen. Nutzen bei \"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen.",
+      "triggerHint": "\"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen.",
+      "example": "Konrad: \"baue ein Login mit Magic-Link\" → verkettet automatisch Spec → Plan → tester (Rot) → implementer (Grün) → Quality-Gates → Review → ggf. Docs, statt jeden Schritt einzeln anzustoßen."
+    },
+    {
+      "name": "new-app",
+      "description": "Gerüst für ein neues App-/Projekt-Repo im Workspace-Standard — README, .gitignore, .env.example, CI, .claude/ (CLAUDE.md + Rules), Conventional-Commit-Setup. Nutzen bei \"neue App\", \"neues Projekt anlegen\", \"scaffold\", \"neues Repo\".",
+      "triggerHint": "\"neue App\", \"neues Projekt anlegen\", \"scaffold\", \"neues Repo\".",
+      "example": "Konrad: \"neues Projekt für einen Rezept-Planer\" → legt `~/Softwareentwicklung/rezept-planer` an mit README, .gitignore, CLAUDE.md, CI-Workflow und GitHub-Repo — Setup wie bei bestehenden Apps."
+    },
+    {
+      "name": "spec",
+      "description": "Erstellt eine Spec (Problem/Ziel, User Stories, Akzeptanzkriterien, Out of Scope) für ein Feature, bevor geplant oder implementiert wird — der erste Schritt von Spec-Driven Development. Nutzen bei \"spec\", \"Anforderungen aufschreiben\", \"spec-driven\", \"was soll das genau tun\", \"/spec\".",
+      "triggerHint": "\"spec\", \"Anforderungen aufschreiben\", \"spec-driven\", \"was soll das genau tun\", \"/spec\".",
+      "example": "Konrad: \"/spec Punkte-System für Waldbingo\" → fragt gezielt nach Zielgruppe/Randbedingungen, schreibt `specs/punkte-system.md` mit Akzeptanzkriterien, legt Konrad zur Freigabe vor, bevor geplant wird."
+    },
+    {
+      "name": "worktree",
+      "description": "Legt einen git-Worktree für Parallelarbeit an (oder listet/entfernt sie), damit mehrere Aufgaben oder Agenten gleichzeitig an verschiedenen Branches laufen, ohne sich zu blockieren. Nutzen bei \"worktree\", \"parallel arbeiten\", \"zweiter Branch gleichzeitig\".",
+      "triggerHint": "\"worktree\", \"parallel arbeiten\", \"zweiter Branch gleichzeitig\".",
+      "example": "Konrad will parallel an Feature A und Bugfix B arbeiten → `worktree.sh new fix/scores-rounding` legt einen zweiten Arbeitsbaum unter `.worktrees/` an, ohne den Feature-A-Branch anzufassen."
+    },
+    {
+      "name": "wrap-session",
+      "description": "Strukturierter Abschluss-Durchlauf für das Ende einer Arbeits-Session — Repo-Zustand prüfen und aufräumen, Doku/CLAUDE.md und Claude-Memory aktuell halten, offene Punkte sauber benennen, kompakte Zusammenfassung geben. Nutzen, wenn Konrad die Session bewusst beenden will: \"wir sind durch\", \"das wars für heute\", \"Session beenden\", \"lass uns abschließen\", \"wrap up\", \"sind wir fertig\" o. Ä. NICHT für Zwischenstände während der Arbeit — nur beim bewussten Abschluss.",
+      "triggerHint": "wenn Konrad die Session bewusst beenden will: \"wir sind durch\", \"das wars für heute\", \"Session beenden\", \"lass uns abschließen\", \"wrap up\", \"sind wir fertig\" o. Ä. NICHT für Zwischenstände während der Arbeit — nur beim bewussten Abschluss.",
+      "example": "Konrad: \"das wars für heute\" → prüft offene Änderungen/PRs je Repo, räumt Worktrees/Scratch-Dateien auf, zieht neue Erkenntnisse in CLAUDE.md/Memory nach und fasst zusammen, was als Nächstes ansteht."
+    }
+  ],
+  "rules": [
+    {
+      "slug": "code-style",
+      "title": "Code-Style (polyglott)",
+      "summary": "Allgemeine, sprachübergreifende Code-Konventionen."
+    },
+    {
+      "slug": "git-and-commits",
+      "title": "Git & Commits",
+      "summary": "Git-Branch-, Commit- und PR-Konventionen für den Workspace."
+    },
+    {
+      "slug": "security-and-secrets",
+      "title": "Sicherheit & Secrets",
+      "summary": "Umgang mit Secrets, .env und öffentlichen Repos."
+    },
+    {
+      "slug": "spec-driven-development",
+      "title": "Spec-Driven Development",
+      "summary": "Bevor bei einem nicht-trivialen Feature geplant oder implementiert wird, wird zuerst spezifiziert was gebaut werden soll — getrennt von wie (das ist der Plan-Schritt, siehe CLAUDE.md → Plan-Mode)."
+    },
+    {
+      "slug": "tdd",
+      "title": "Test-Driven Development",
+      "summary": "Rot-Grün-Refactor ist Pflicht für neues Verhalten und Bugfixes — Tests kommen vor dem Implementierungscode, nicht danach."
+    },
+    {
+      "slug": "worktrees",
+      "title": "Worktrees",
+      "summary": "Worktree-Workflow für parallele Arbeit."
+    }
+  ],
+  "hooks": [
+    {
+      "name": "git-safety",
+      "file": "git-safety.sh",
+      "events": [
+        "PreToolUse:Bash"
+      ],
+      "purpose": "Blockiert riskante Git-Kommandos (force-push, push auf main/master, reset --hard, clean -f, Commit einer echten .env) im Workspace-Scope."
+    },
+    {
+      "name": "infra-dashboard-sync",
+      "file": "infra-dashboard-sync.sh",
+      "events": [
+        "PostToolUse:Edit|Write|MultiEdit",
+        "PostToolUse:Bash",
+        "Stop"
+      ],
+      "purpose": "Hält dieses Dashboard aktuell: bei relevanten Änderungen generiert und pusht es einen neuen Snapshot auf den data-Branch (siehe Workflow \"Dashboard-Sync\")."
+    },
+    {
+      "name": "stop-notify",
+      "file": "stop-notify.sh",
+      "events": [
+        "Stop"
+      ],
+      "purpose": "Benachrichtigt Konrad, wenn eine Session/Runde endet."
+    },
+    {
+      "name": "tdd-gate",
+      "file": "tdd-gate.sh",
+      "events": [
+        "PreToolUse:Bash",
+        "PostToolUse:Edit|Write|MultiEdit",
+        "PostToolUse:Bash"
+      ],
+      "purpose": "Blockiert git commit ohne grünen Testlauf und gh pr create ohne grüne Lint-/Typecheck-/Test-Gates seit der letzten Code-Änderung."
+    }
+  ],
+  "workflows": [
+    {
+      "slug": "spec-driven-tdd",
+      "title": "Spec-Driven Development + Zwei-Agenten-TDD",
+      "description": "Der volle Weg von der Anforderung bis zum reviewbereiten Diff, für nicht-triviale oder mehrdateiige Features (siehe .claude/rules/spec-driven-development.md).",
+      "steps": [
+        {
+          "id": "spec",
+          "label": "Spec",
+          "description": "spec-Skill: Problem/Ziel, User Stories, Akzeptanzkriterien, Out of Scope.",
+          "branch": null
+        },
+        {
+          "id": "approval-spec",
+          "label": "Freigabe (Konrad)",
+          "description": "Menschliches Review-Gate — ohne Freigabe kein Übergang zum Plan.",
+          "branch": null
+        },
+        {
+          "id": "plan",
+          "label": "Plan",
+          "description": "planner-Agent: Datei-für-Datei-Plan inkl. Interfaces & Contracts.",
+          "branch": null
+        },
+        {
+          "id": "approval-plan",
+          "label": "Freigabe (Konrad)",
+          "description": "Zweites Gate vor Implementierung.",
+          "branch": null
+        },
+        {
+          "id": "tester",
+          "label": "Rot: tester",
+          "description": "Schreibt fehlschlagende Tests aus Spec-Kriterien + Plan-Kontrakten.",
+          "branch": null
+        },
+        {
+          "id": "implementer",
+          "label": "Grün: implementer",
+          "description": "Verifiziert den Rot-Grund, implementiert exakt gegen die Kontrakte.",
+          "branch": null
+        },
+        {
+          "id": "gates",
+          "label": "Quality-Gates",
+          "description": "lint/typecheck/test/build des Projekts — grün ist Pflicht.",
+          "branch": null
+        },
+        {
+          "id": "reviewer",
+          "label": "reviewer",
+          "description": "Prüft gegen die Akzeptanzkriterien der Spec.",
+          "branch": null
+        },
+        {
+          "id": "security",
+          "label": "security (bedingt)",
+          "description": "Nur bei Auth/Backend/Datenverarbeitung.",
+          "branch": "conditional"
+        },
+        {
+          "id": "docs",
+          "label": "docs",
+          "description": "README/CHANGELOG/Docblocks bei nutzersichtbaren Änderungen.",
+          "branch": null
+        },
+        {
+          "id": "commit",
+          "label": "commit-Skill",
+          "description": "Konrad entscheidet — kein automatischer Commit.",
+          "branch": null
+        }
+      ],
+      "edges": [
+        {
+          "from": "spec",
+          "to": "approval-spec",
+          "label": null
+        },
+        {
+          "from": "approval-spec",
+          "to": "plan",
+          "label": null
+        },
+        {
+          "from": "plan",
+          "to": "approval-plan",
+          "label": null
+        },
+        {
+          "from": "approval-plan",
+          "to": "tester",
+          "label": null
+        },
+        {
+          "from": "tester",
+          "to": "implementer",
+          "label": "rot bestätigt"
+        },
+        {
+          "from": "implementer",
+          "to": "gates",
+          "label": null
+        },
+        {
+          "from": "gates",
+          "to": "reviewer",
+          "label": null
+        },
+        {
+          "from": "reviewer",
+          "to": "security",
+          "label": "falls Auth/Backend"
+        },
+        {
+          "from": "reviewer",
+          "to": "docs",
+          "label": "sonst direkt"
+        },
+        {
+          "from": "security",
+          "to": "docs",
+          "label": null
+        },
+        {
+          "from": "docs",
+          "to": "commit",
+          "label": null
+        }
+      ]
+    },
+    {
+      "slug": "tdd-gate-hook",
+      "title": "Globales TDD-Gate (tdd-gate.sh)",
+      "description": "Blockiert git commit ohne grünen Testlauf und gh pr create ohne grüne Gates, seit der letzten Code-Änderung — automatisch durchgesetzt, nicht nur als Konvention.",
+      "steps": [
+        {
+          "id": "edit",
+          "label": "Edit/Write/MultiEdit",
+          "description": "Code-Datei geändert (Doku/specs zählt nicht als \"dirty\").",
+          "branch": null
+        },
+        {
+          "id": "mark-dirty",
+          "label": "PostToolUse: dirty markieren",
+          "description": "Legt .git/claude-{tdd,lint,typecheck}-dirty an.",
+          "branch": null
+        },
+        {
+          "id": "run-tests",
+          "label": "Testlauf (Bash)",
+          "description": "npm test / phpunit / pytest o. ä.",
+          "branch": null
+        },
+        {
+          "id": "clear-dirty",
+          "label": "PostToolUse: dirty löschen",
+          "description": "Nur bei Erfolg (exit 0) wird der jeweilige Marker entfernt.",
+          "branch": null
+        },
+        {
+          "id": "commit-attempt",
+          "label": "git commit (PreToolUse)",
+          "description": "Prüft Marker vor der Ausführung.",
+          "branch": null
+        },
+        {
+          "id": "blocked",
+          "label": "BLOCKED (exit 2)",
+          "description": "Commit wird verweigert, Grund wird ausgegeben.",
+          "branch": "fail"
+        },
+        {
+          "id": "allowed",
+          "label": "Commit erlaubt",
+          "description": "Kein offener dirty-Marker → Ausführung geht durch.",
+          "branch": "pass"
+        }
+      ],
+      "edges": [
+        {
+          "from": "edit",
+          "to": "mark-dirty",
+          "label": null
+        },
+        {
+          "from": "mark-dirty",
+          "to": "run-tests",
+          "label": "vor dem Commit"
+        },
+        {
+          "from": "run-tests",
+          "to": "clear-dirty",
+          "label": "grün"
+        },
+        {
+          "from": "mark-dirty",
+          "to": "commit-attempt",
+          "label": "ohne Testlauf"
+        },
+        {
+          "from": "clear-dirty",
+          "to": "commit-attempt",
+          "label": null
+        },
+        {
+          "from": "commit-attempt",
+          "to": "blocked",
+          "label": "Marker noch da"
+        },
+        {
+          "from": "commit-attempt",
+          "to": "allowed",
+          "label": "kein Marker"
+        }
+      ]
+    },
+    {
+      "slug": "dashboard-sync",
+      "title": "Dashboard-Sync (dieses Dashboard)",
+      "description": "Wie dieses Dashboard selbst automatisch aktuell bleibt, ohne main direkt zu committen und ohne Redeploy pro Datenupdate.",
+      "steps": [
+        {
+          "id": "change",
+          "label": "Relevante Änderung",
+          "description": "Edit/Write unter ~/.claude/{agents,skills,rules,hooks} oder ein git commit in einem Workspace-Repo.",
+          "branch": null
+        },
+        {
+          "id": "mark-dirty",
+          "label": "PostToolUse: dashboard-dirty markieren",
+          "description": "infra-dashboard-sync.sh setzt einen Marker.",
+          "branch": null
+        },
+        {
+          "id": "stop",
+          "label": "Stop-Hook (async)",
+          "description": "Läuft am Ende jeder Session/Runde.",
+          "branch": null
+        },
+        {
+          "id": "throttle",
+          "label": "Marker + Throttle prüfen",
+          "description": "Nur wenn dirty UND letzter Sync ≥10min her.",
+          "branch": null
+        },
+        {
+          "id": "generate",
+          "label": "generate-snapshot.ts",
+          "description": "Scannt Repos, Agents, Skills, Rules, Hooks, lokale TDD-Gate-Logs, CI-Status.",
+          "branch": null
+        },
+        {
+          "id": "commit-data",
+          "label": "Commit auf data-Branch",
+          "description": "Separater persistenter Klon, NICHT der main-Arbeitsbaum.",
+          "branch": null
+        },
+        {
+          "id": "push",
+          "label": "git push",
+          "description": "Auf den bot-only data-Branch dieses Repos.",
+          "branch": null
+        },
+        {
+          "id": "fetch",
+          "label": "App: fetch zur Laufzeit",
+          "description": "Next.js liest raw GitHub Content mit revalidate — kein Redeploy nötig.",
+          "branch": null
+        }
+      ],
+      "edges": [
+        {
+          "from": "change",
+          "to": "mark-dirty",
+          "label": null
+        },
+        {
+          "from": "mark-dirty",
+          "to": "stop",
+          "label": null
+        },
+        {
+          "from": "stop",
+          "to": "throttle",
+          "label": null
+        },
+        {
+          "from": "throttle",
+          "to": "generate",
+          "label": "sync fällig"
+        },
+        {
+          "from": "generate",
+          "to": "commit-data",
+          "label": null
+        },
+        {
+          "from": "commit-data",
+          "to": "push",
+          "label": null
+        },
+        {
+          "from": "push",
+          "to": "fetch",
+          "label": null
+        }
+      ]
+    },
+    {
+      "slug": "parallel-worktrees",
+      "title": "Parallele Agenten mit Worktrees",
+      "description": "Wie mehrere code-schreibende Subagents gleichzeitig arbeiten, ohne sich gegenseitig Dateien zu überschreiben.",
+      "steps": [
+        {
+          "id": "request",
+          "label": "Multi-Task-Anfrage",
+          "description": "Mehrere unabhängige Slices eines Features oder mehrere Aufgaben gleichzeitig.",
+          "branch": null
+        },
+        {
+          "id": "spawn",
+          "label": "Agent-Tool mit isolation: worktree",
+          "description": "Jeder Subagent bekommt einen eigenen Arbeitsbaum.",
+          "branch": null
+        },
+        {
+          "id": "wt1",
+          "label": "Worktree A",
+          "description": "Eigener Branch, eigenes Rot-Grün-Refactor.",
+          "branch": "lane-a"
+        },
+        {
+          "id": "wt2",
+          "label": "Worktree B",
+          "description": "Eigener Branch, eigenes Rot-Grün-Refactor.",
+          "branch": "lane-b"
+        },
+        {
+          "id": "integrate",
+          "label": "Ergebnisse integrieren",
+          "description": "Unveränderte Worktrees werden automatisch aufgeräumt.",
+          "branch": null
+        }
+      ],
+      "edges": [
+        {
+          "from": "request",
+          "to": "spawn",
+          "label": null
+        },
+        {
+          "from": "spawn",
+          "to": "wt1",
+          "label": null
+        },
+        {
+          "from": "spawn",
+          "to": "wt2",
+          "label": null
+        },
+        {
+          "from": "wt1",
+          "to": "integrate",
+          "label": null
+        },
+        {
+          "from": "wt2",
+          "to": "integrate",
+          "label": null
+        }
+      ]
+    }
+  ],
+  "monitoring": {
+    "tddGate": {
+      "windowDays": 30,
+      "totalBlocks": 0,
+      "byRepo": {},
+      "byGate": {},
+      "recentEvents": []
+    },
+    "ci": [
+      {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-26T13:16:10Z",
+        "url": "https://github.com/konradthiemann/Doewe/actions/runs/32972952129",
+        "repo": "Doewe"
+      },
+      {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-27T07:11:00Z",
+        "url": "https://github.com/konradthiemann/Foto-Challenge/actions/runs/33048599798",
+        "repo": "Foto-Challenge"
+      },
+      {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-20T12:54:18Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/32371254341",
+        "repo": "Pok-mon-TCG-Prize-Checker"
+      },
+      {
+        "workflow": "Dependabot Updates",
+        "status": "completed",
+        "conclusion": "failure",
+        "updatedAt": "2026-08-17T04:25:04Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/31994349758",
+        "repo": "Pokekon"
+      },
+      {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-20T12:54:47Z",
+        "url": "https://github.com/konradthiemann/Waldbingo/actions/runs/32371272907",
+        "repo": "Waldbingo"
+      },
+      {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-27T08:56:58Z",
+        "url": "https://github.com/konradthiemann/agentic-infra-dashboard/actions/runs/33056215345",
+        "repo": "agentic-infra-dashboard"
+      },
+      {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-20T12:54:29Z",
+        "url": "https://github.com/konradthiemann/bilderraetsel/actions/runs/32371281471",
+        "repo": "bilderraetsel"
+      },
+      {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-27T07:11:25Z",
+        "url": "https://github.com/konradthiemann/control-plane/actions/runs/33048660393",
+        "repo": "control-plane"
+      },
+      {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-20T12:54:35Z",
+        "url": "https://github.com/konradthiemann/portfolio2/actions/runs/32371264094",
+        "repo": "portfolio2"
+      }
+    ]
+  }
+}
