@@ -38,6 +38,23 @@ describe("WorkflowGraph", () => {
 
   it("renders exactly as many connecting lines as edges", () => {
     const { container } = render(<WorkflowGraph diagram={diagram} />);
-    expect(container.querySelectorAll("polyline")).toHaveLength(diagram.edges.length);
+    expect(container.querySelectorAll('[data-testid="workflow-edge"]')).toHaveLength(
+      diagram.edges.length,
+    );
+  });
+
+  it("gives a step with a non-null branch a distinct accent from a plain step", () => {
+    const branchedDiagram: WorkflowDiagram = {
+      ...diagram,
+      steps: [
+        { id: "a", label: "Plain", description: null, branch: null },
+        { id: "b", label: "Conditional", description: null, branch: "conditional" },
+      ],
+      edges: [{ from: "a", to: "b", label: null }],
+    };
+    render(<WorkflowGraph diagram={branchedDiagram} />);
+    const plain = screen.getByText("Plain").closest("div")!;
+    const conditional = screen.getByText("Conditional").closest("div")!;
+    expect(plain.className).not.toBe(conditional.className);
   });
 });
