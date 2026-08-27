@@ -1,5 +1,7 @@
 # Agentic Infra Dashboard
 
+**Live:** https://agentic-infra-dashboard-production.up.railway.app
+
 Meta-Dashboard über Konrads KI-Agentik-Engineering-Infrastruktur: Repos unter
 `~/Softwareentwicklung`, globale Claude-Code-Agents/Skills/Rules/Hooks, die
 Abläufe, die sie bilden, und ein einfaches Monitoring (TDD-Gate-Blocks,
