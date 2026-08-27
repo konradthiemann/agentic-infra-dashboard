@@ -60,8 +60,13 @@ Commit-Format, Sprache (Code Englisch, Prosa Deutsch), TDD-Pflicht,
 Quality-Gates. Dieses Projekt hat keine eigenen Agents — nutzt die globalen.
 
 ## Deploy
+Live: https://agentic-infra-dashboard-production.up.railway.app
+
 Railway, Service `agentic-infra-dashboard`, deployt automatisch bei Push auf
-`main` mit grüner CI (analog `control-plane`). Keine Secrets nötig — der
+`main` mit grüner CI (analog `control-plane`, braucht dafür das GitHub-Secret
+`RAILWAY_TOKEN` — ohne das Secret no-opt der Deploy-Job, siehe
+`.github/workflows/ci.yml`). Manuelle Deploys: `railway up --service
+agentic-infra-dashboard --detach`. Keine App-Secrets nötig — der
 `data`-Branch ist öffentlich lesbar per raw GitHub Content.
 
 <!-- BEGIN:nextjs-agent-rules -->
