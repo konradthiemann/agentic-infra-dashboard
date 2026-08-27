@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T08:17:56.148Z",
+  "generatedAt": "2026-08-27T08:25:57.436Z",
   "workspace": {
     "repoCount": 12,
     "agentCount": 8,
@@ -151,11 +151,11 @@
       "githubUrl": null,
       "deployTarget": "Railway",
       "defaultBranch": "main",
-      "hasOwnClaudeConfig": false,
+      "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "94f0ced03fc2d8955c15debc0229b8f1be456eed",
-        "message": "Initial commit from Create Next App",
-        "date": "2026-08-27T10:08:18+02:00",
+        "sha": "4b8c95ed9ace059c2c769168f7516016f658c61a",
+        "message": "feat(data): add runtime snapshot fetch layer with dev fixture fallback",
+        "date": "2026-08-27T10:21:36+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": null
@@ -421,7 +421,7 @@
     {
       "name": "commit",
       "description": "Erstellt einen Commit im Workspace-Standard — Conventional Commit (type(scope): summary) mit Goal/Why/How-Body und Co-Author-Zeile, als ein fokussierter logischer Schritt. Nutzen, wenn Konrad \"commit\", \"commite das\", \"mach einen Commit\" oder Ähnliches sagt.",
-      "triggerHint": null,
+      "triggerHint": "wenn Konrad \"commit\", \"commite das\", \"mach einen Commit\" oder Ähnliches sagt.",
       "example": "Konrad: \"commite das\" → prüft git status/diff, teilt in logische Schritte, formatiert als `feat(scores): add points endpoint` mit Goal/Why/How-Body und Co-Author-Zeile."
     },
     {
@@ -457,7 +457,7 @@
     {
       "name": "wrap-session",
       "description": "Strukturierter Abschluss-Durchlauf für das Ende einer Arbeits-Session — Repo-Zustand prüfen und aufräumen, Doku/CLAUDE.md und Claude-Memory aktuell halten, offene Punkte sauber benennen, kompakte Zusammenfassung geben. Nutzen, wenn Konrad die Session bewusst beenden will: \"wir sind durch\", \"das wars für heute\", \"Session beenden\", \"lass uns abschließen\", \"wrap up\", \"sind wir fertig\" o. Ä. NICHT für Zwischenstände während der Arbeit — nur beim bewussten Abschluss.",
-      "triggerHint": null,
+      "triggerHint": "wenn Konrad die Session bewusst beenden will: \"wir sind durch\", \"das wars für heute\", \"Session beenden\", \"lass uns abschließen\", \"wrap up\", \"sind wir fertig\" o. Ä. NICHT für Zwischenstände während der Arbeit — nur beim bewussten Abschluss.",
       "example": "Konrad: \"das wars für heute\" → prüft offene Änderungen/PRs je Repo, räumt Worktrees/Scratch-Dateien auf, zieht neue Erkenntnisse in CLAUDE.md/Memory nach und fasst zusammen, was als Nächstes ansteht."
     }
   ],
@@ -501,6 +501,16 @@
         "PreToolUse:Bash"
       ],
       "purpose": "Blockiert riskante Git-Kommandos (force-push, push auf main/master, reset --hard, clean -f, Commit einer echten .env) im Workspace-Scope."
+    },
+    {
+      "name": "infra-dashboard-sync",
+      "file": "infra-dashboard-sync.sh",
+      "events": [
+        "PostToolUse:Edit|Write|MultiEdit",
+        "PostToolUse:Bash",
+        "Stop"
+      ],
+      "purpose": "Hält dieses Dashboard aktuell: bei relevanten Änderungen generiert und pusht es einen neuen Snapshot auf den data-Branch (siehe Workflow \"Dashboard-Sync\")."
     },
     {
       "name": "stop-notify",
