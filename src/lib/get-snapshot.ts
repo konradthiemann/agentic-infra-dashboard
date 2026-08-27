@@ -1,4 +1,5 @@
 import "server-only";
+import { cache } from "react";
 import { snapshotSchema, type Snapshot } from "./snapshot-schema";
 import fixtureSnapshot from "../../fixtures/snapshot.sample.json";
 
@@ -18,8 +19,12 @@ function revalidateSeconds(): number {
  * app is usable offline. In production a failed fetch surfaces as `null` —
  * the UI must show a clear "not available" state, never crash or show
  * stale fixture data pretending to be live.
+ *
+ * Memoized per request (React `cache`) — layout.tsx and every page call
+ * this, and without dedup that's a duplicate fetch (and duplicate
+ * fallback-warning logs) on every single request.
  */
-export async function getSnapshot(): Promise<Snapshot | null> {
+export const getSnapshot = cache(async (): Promise<Snapshot | null> => {
   const url = process.env.NEXT_PUBLIC_SNAPSHOT_URL || DEFAULT_SNAPSHOT_URL;
 
   try {
@@ -40,4 +45,4 @@ export async function getSnapshot(): Promise<Snapshot | null> {
     }
     return null;
   }
-}
+});

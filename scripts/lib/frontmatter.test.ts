@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { parseFrontmatter, firstHeading, firstParagraph } from "./frontmatter.ts";
+import { parseFrontmatter, firstHeading, firstParagraph, summarizeRuleMarkdown } from "./frontmatter.ts";
 
 describe("parseFrontmatter", () => {
   it("extracts flat key/value pairs and the body", () => {
@@ -39,5 +39,42 @@ describe("firstParagraph", () => {
   it("returns the first paragraph after the heading, collapsed to one line", () => {
     const body = "# Title\n\nFirst line\nsecond line.\n\nSecond paragraph.";
     expect(firstParagraph(body)).toBe("First line second line.");
+  });
+
+  it("strips inline markdown emphasis and code spans so it reads as plain text", () => {
+    const body = "# Title\n\nTests kommen **vor** dem Code, siehe `CLAUDE.md` für Details.";
+    expect(firstParagraph(body)).toBe("Tests kommen vor dem Code, siehe CLAUDE.md für Details.");
+  });
+});
+
+describe("summarizeRuleMarkdown", () => {
+  it("uses the frontmatter description as summary, not the raw frontmatter block", () => {
+    // Real shape of e.g. .claude/rules/code-style.md — description in
+    // frontmatter, heading + body below it.
+    const raw = [
+      "---",
+      "description: Allgemeine, sprachübergreifende Code-Konventionen.",
+      "---",
+      "# Code-Style (polyglott)",
+      "",
+      "## Übergreifend",
+      "- Code, Bezeichner, Code-Kommentare: **Englisch**.",
+    ].join("\n");
+
+    const { title, summary } = summarizeRuleMarkdown(raw);
+
+    expect(title).toBe("Code-Style (polyglott)");
+    expect(summary).toBe("Allgemeine, sprachübergreifende Code-Konventionen.");
+    expect(summary).not.toContain("---");
+    expect(summary).not.toContain("description:");
+  });
+
+  it("falls back to the first paragraph when there is no frontmatter", () => {
+    const raw = "# Test-Driven Development\n\nRot-Grün-Refactor ist Pflicht für neues Verhalten.";
+
+    const { title, summary } = summarizeRuleMarkdown(raw);
+
+    expect(title).toBe("Test-Driven Development");
+    expect(summary).toBe("Rot-Grün-Refactor ist Pflicht für neues Verhalten.");
   });
 });

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T08:25:57.436Z",
+  "generatedAt": "2026-08-27T08:46:33.041Z",
   "workspace": {
     "repoCount": 12,
     "agentCount": 8,
@@ -153,9 +153,9 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "4b8c95ed9ace059c2c769168f7516016f658c61a",
-        "message": "feat(data): add runtime snapshot fetch layer with dev fixture fallback",
-        "date": "2026-08-27T10:21:36+02:00",
+        "sha": "8f963299b2ea98d7d0e6d67f369af488c973e1d4",
+        "message": "merge: bring in dashboard UI (overview, repos, agents-skills, workflows, monitoring)",
+        "date": "2026-08-27T10:38:04+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": null
@@ -465,32 +465,32 @@
     {
       "slug": "code-style",
       "title": "Code-Style (polyglott)",
-      "summary": "--- description: Allgemeine, sprachübergreifende Code-Konventionen. ---"
+      "summary": "Allgemeine, sprachübergreifende Code-Konventionen."
     },
     {
       "slug": "git-and-commits",
       "title": "Git & Commits",
-      "summary": "--- description: Git-Branch-, Commit- und PR-Konventionen für den Workspace. ---"
+      "summary": "Git-Branch-, Commit- und PR-Konventionen für den Workspace."
     },
     {
       "slug": "security-and-secrets",
       "title": "Sicherheit & Secrets",
-      "summary": "--- description: Umgang mit Secrets, .env und öffentlichen Repos. ---"
+      "summary": "Umgang mit Secrets, .env und öffentlichen Repos."
     },
     {
       "slug": "spec-driven-development",
       "title": "Spec-Driven Development",
-      "summary": "Bevor bei einem nicht-trivialen Feature geplant oder implementiert wird, wird zuerst spezifiziert **was** gebaut werden soll — getrennt von **wie** (das ist der Plan-Schritt, siehe `CLAUDE.md` → Plan-Mode)."
+      "summary": "Bevor bei einem nicht-trivialen Feature geplant oder implementiert wird, wird zuerst spezifiziert was gebaut werden soll — getrennt von wie (das ist der Plan-Schritt, siehe CLAUDE.md → Plan-Mode)."
     },
     {
       "slug": "tdd",
       "title": "Test-Driven Development",
-      "summary": "Rot-Grün-Refactor ist Pflicht für neues Verhalten und Bugfixes — Tests kommen **vor** dem Implementierungscode, nicht danach."
+      "summary": "Rot-Grün-Refactor ist Pflicht für neues Verhalten und Bugfixes — Tests kommen vor dem Implementierungscode, nicht danach."
     },
     {
       "slug": "worktrees",
       "title": "Worktrees",
-      "summary": "--- description: Worktree-Workflow für parallele Arbeit. ---"
+      "summary": "Worktree-Workflow für parallele Arbeit."
     }
   ],
   "hooks": [

@@ -31,9 +31,33 @@ export function firstHeading(body: string): string | null {
   return match ? match[1].trim() : null;
 }
 
+/** Strips the inline markdown our own docs use (bold/italic/code spans), keeping the text. */
+function stripInlineMarkdown(text: string): string {
+  return text
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/\*([^*]+)\*/g, "$1");
+}
+
 /** First non-empty paragraph after the first heading, as a plain-text summary. */
 export function firstParagraph(body: string): string {
   const withoutHeading = body.replace(/^#\s+.+$/m, "").trim();
   const paragraph = withoutHeading.split(/\n\s*\n/)[0] ?? "";
-  return paragraph.replace(/\s+/g, " ").trim();
+  return stripInlineMarkdown(paragraph.replace(/\s+/g, " ").trim());
+}
+
+/**
+ * Summarizes a rule markdown file for display: title from the first
+ * heading, summary from the frontmatter `description` when present
+ * (several of our rule files have one), otherwise the first paragraph of
+ * the body. Always strips frontmatter first — using firstParagraph on the
+ * raw file would otherwise pick up the frontmatter block itself as the
+ * "paragraph" when a heading follows it.
+ */
+export function summarizeRuleMarkdown(raw: string): { title: string | null; summary: string } {
+  const { frontmatter, body } = parseFrontmatter(raw);
+  return {
+    title: firstHeading(body),
+    summary: frontmatter.description ?? firstParagraph(body),
+  };
 }
