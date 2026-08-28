@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T10:55:15.265Z",
+  "generatedAt": "2026-08-28T11:53:34.504Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
@@ -81,11 +81,11 @@
         "author": "Konrad Thiemann"
       },
       "ci": {
-        "workflow": "CI",
+        "workflow": "Keep Supabase awake",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T10:55:03Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33165144685"
+        "updatedAt": "2026-08-28T11:29:44Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33167353849"
       }
     },
     {
@@ -209,17 +209,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "2a04b7caf9de18773ae13eeab074791299fc3c1c",
-        "message": "Merge pull request #17 from konradthiemann/feat/responsive-dashboard",
-        "date": "2026-08-27T09:10:42+02:00",
+        "sha": "4343336701947eeb124f66fee9862819ce609bc8",
+        "message": "Merge pull request #19 from konradthiemann/fix/prized-lastroundat-date",
+        "date": "2026-08-28T13:42:20+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T10:38:36Z",
-        "url": "https://github.com/konradthiemann/control-plane/actions/runs/33164109601"
+        "updatedAt": "2026-08-28T11:52:09Z",
+        "url": "https://github.com/konradthiemann/control-plane/actions/runs/33168766892"
       }
     },
     {
@@ -273,17 +273,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "abf31589710b8dde69ffda0711473abce846915c",
-        "message": "docs: document live deploy, missing env vars, and Railway gotchas (#3)",
-        "date": "2026-08-28T12:50:40+02:00",
+        "sha": "d053d5108965b2f5586bcffeea4300f853766d78",
+        "message": "fix(categorize): send anthropic-workspace-id for identity-linked API keys (#5)",
+        "date": "2026-08-28T13:20:23+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T10:52:20Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33164897732"
+        "updatedAt": "2026-08-28T11:22:21Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33166772538"
       }
     },
     {
@@ -962,11 +962,11 @@
         "repo": "Foto-Challenge"
       },
       {
-        "workflow": "CI",
+        "workflow": "Keep Supabase awake",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T10:55:03Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33165144685",
+        "updatedAt": "2026-08-28T11:29:44Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33167353849",
         "repo": "Pok-mon-TCG-Prize-Checker"
       },
       {
@@ -1005,16 +1005,16 @@
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T10:38:36Z",
-        "url": "https://github.com/konradthiemann/control-plane/actions/runs/33164109601",
+        "updatedAt": "2026-08-28T11:52:09Z",
+        "url": "https://github.com/konradthiemann/control-plane/actions/runs/33168766892",
         "repo": "control-plane"
       },
       {
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T10:52:20Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33164897732",
+        "updatedAt": "2026-08-28T11:22:21Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33166772538",
         "repo": "kassenbuch"
       },
       {
