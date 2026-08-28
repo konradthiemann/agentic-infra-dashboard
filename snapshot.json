@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T09:48:19.684Z",
+  "generatedAt": "2026-08-28T10:25:48.127Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
@@ -75,17 +75,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "cc7ed7e4919be9a00155db5a44e8700e9bd37efc",
-        "message": "chore: repo-hygiene baseline (CI, LICENSE, env-example, editorconfig) (#1)",
-        "date": "2026-08-20T14:53:54+02:00",
+        "sha": "01d2358218f4f11f0129e2a285e2ff91a6856878",
+        "message": "feat: add admin API for control-plane CRM anbindung",
+        "date": "2026-08-28T12:19:49+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-20T12:54:18Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/32371254341"
+        "updatedAt": "2026-08-28T10:20:28Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33162949028"
       }
     },
     {
@@ -271,11 +271,11 @@
       "githubUrl": null,
       "deployTarget": null,
       "defaultBranch": "main",
-      "hasOwnClaudeConfig": false,
+      "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "f6f6eb0c23491583034edbebce332f71baa7bf59",
-        "message": "chore: scaffold project",
-        "date": "2026-08-28T11:46:34+02:00",
+        "sha": "795ce138c6d9befb726e5e3c68a6c7bf4c213a75",
+        "message": "fix(auth): make session tokens Edge-runtime compatible via Web Crypto",
+        "date": "2026-08-28T12:24:36+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": null
@@ -959,8 +959,8 @@
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-20T12:54:18Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/32371254341",
+        "updatedAt": "2026-08-28T10:20:28Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33162949028",
         "repo": "Pok-mon-TCG-Prize-Checker"
       },
       {
