@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-27T09:04:29.615Z",
+  "generatedAt": "2026-08-28T09:48:19.684Z",
   "workspace": {
-    "repoCount": 12,
+    "repoCount": 13,
     "agentCount": 8,
     "skillCount": 7
   },
@@ -153,17 +153,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "dd61d11fd520d90dd6c8e4c1d275fa2c835c0083",
-        "message": "fix(rules): strip frontmatter and inline markdown from rule summaries",
-        "date": "2026-08-27T10:46:49+02:00",
+        "sha": "b073c0d5564cc0d619c4231fa8f779e011d01749",
+        "message": "feat(workflows): redesign diagrams as left-to-right pipelines with accents (#2)",
+        "date": "2026-08-27T12:25:49+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-27T09:04:10Z",
-        "url": "https://github.com/konradthiemann/agentic-infra-dashboard/actions/runs/33056777626"
+        "updatedAt": "2026-08-27T10:27:13Z",
+        "url": "https://github.com/konradthiemann/agentic-infra-dashboard/actions/runs/33063000356"
       }
     },
     {
@@ -257,6 +257,25 @@
         "sha": "58230aa027b8bb121a7bcad0681753de295943aa",
         "message": "feat: add gmail_bulk_archive for mass inbox cleanup",
         "date": "2026-08-21T07:04:20+02:00",
+        "author": "Konrad Thiemann"
+      },
+      "ci": null
+    },
+    {
+      "slug": "kassenbuch",
+      "name": "kassenbuch",
+      "role": "App",
+      "stack": [
+        "Node"
+      ],
+      "githubUrl": null,
+      "deployTarget": null,
+      "defaultBranch": "main",
+      "hasOwnClaudeConfig": false,
+      "lastCommit": {
+        "sha": "f6f6eb0c23491583034edbebce332f71baa7bf59",
+        "message": "chore: scaffold project",
+        "date": "2026-08-28T11:46:34+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": null
@@ -964,8 +983,8 @@
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-27T09:04:10Z",
-        "url": "https://github.com/konradthiemann/agentic-infra-dashboard/actions/runs/33056777626",
+        "updatedAt": "2026-08-27T10:27:13Z",
+        "url": "https://github.com/konradthiemann/agentic-infra-dashboard/actions/runs/33063000356",
         "repo": "agentic-infra-dashboard"
       },
       {
