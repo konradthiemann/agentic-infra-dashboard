@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T10:25:48.127Z",
+  "generatedAt": "2026-08-28T10:55:15.265Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
@@ -75,17 +75,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "01d2358218f4f11f0129e2a285e2ff91a6856878",
-        "message": "feat: add admin API for control-plane CRM anbindung",
-        "date": "2026-08-28T12:19:49+02:00",
+        "sha": "6f45a52bf7e76777811ca8567a0310769ee86f77",
+        "message": "chore: keep Supabase free-tier project awake via scheduled ping",
+        "date": "2026-08-28T12:54:33+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T10:20:28Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33162949028"
+        "updatedAt": "2026-08-28T10:55:03Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33165144685"
       }
     },
     {
@@ -218,8 +218,8 @@
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-27T07:11:25Z",
-        "url": "https://github.com/konradthiemann/control-plane/actions/runs/33048660393"
+        "updatedAt": "2026-08-28T10:38:36Z",
+        "url": "https://github.com/konradthiemann/control-plane/actions/runs/33164109601"
       }
     },
     {
@@ -268,17 +268,23 @@
       "stack": [
         "Node"
       ],
-      "githubUrl": null,
+      "githubUrl": "https://github.com/konradthiemann/kassenbuch",
       "deployTarget": null,
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "795ce138c6d9befb726e5e3c68a6c7bf4c213a75",
-        "message": "fix(auth): make session tokens Edge-runtime compatible via Web Crypto",
-        "date": "2026-08-28T12:24:36+02:00",
+        "sha": "abf31589710b8dde69ffda0711473abce846915c",
+        "message": "docs: document live deploy, missing env vars, and Railway gotchas (#3)",
+        "date": "2026-08-28T12:50:40+02:00",
         "author": "Konrad Thiemann"
       },
-      "ci": null
+      "ci": {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-28T10:52:20Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33164897732"
+      }
     },
     {
       "slug": "notes-mcp",
@@ -959,8 +965,8 @@
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T10:20:28Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33162949028",
+        "updatedAt": "2026-08-28T10:55:03Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33165144685",
         "repo": "Pok-mon-TCG-Prize-Checker"
       },
       {
@@ -999,9 +1005,17 @@
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-27T07:11:25Z",
-        "url": "https://github.com/konradthiemann/control-plane/actions/runs/33048660393",
+        "updatedAt": "2026-08-28T10:38:36Z",
+        "url": "https://github.com/konradthiemann/control-plane/actions/runs/33164109601",
         "repo": "control-plane"
+      },
+      {
+        "workflow": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-08-28T10:52:20Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33164897732",
+        "repo": "kassenbuch"
       },
       {
         "workflow": "CI",
