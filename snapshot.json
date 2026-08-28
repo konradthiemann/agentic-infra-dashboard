@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T11:53:34.504Z",
+  "generatedAt": "2026-08-28T12:04:05.582Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
@@ -273,17 +273,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "d053d5108965b2f5586bcffeea4300f853766d78",
-        "message": "fix(categorize): send anthropic-workspace-id for identity-linked API keys (#5)",
-        "date": "2026-08-28T13:20:23+02:00",
+        "sha": "5803d36ffc38717140936ee776e95e36cdd22614",
+        "message": "docs: capture live-debugging gotchas from today's deploy session (#6)",
+        "date": "2026-08-28T14:01:46+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T11:22:21Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33166772538"
+        "updatedAt": "2026-08-28T12:03:37Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33169424199"
       }
     },
     {
@@ -1013,8 +1013,8 @@
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T11:22:21Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33166772538",
+        "updatedAt": "2026-08-28T12:03:37Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33169424199",
         "repo": "kassenbuch"
       },
       {
