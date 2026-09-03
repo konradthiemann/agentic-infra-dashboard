@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-28T12:04:05.582Z",
+  "generatedAt": "2026-09-03T08:46:52.699Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
-    "skillCount": 7
+    "skillCount": 9
   },
   "repos": [
     {
@@ -84,8 +84,8 @@
         "workflow": "Keep Supabase awake",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T11:29:44Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33167353849"
+        "updatedAt": "2026-09-01T06:05:35Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33476134988"
       }
     },
     {
@@ -101,17 +101,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "fc85ec21731fdfcec3c88e69271f0938d5e91c4f",
-        "message": "Merge pull request #40 from konradthiemann/chore/agent-memory-copilot-config",
-        "date": "2026-08-04T16:12:12+02:00",
+        "sha": "e35fbc217a5969bfe9f96d6e5b2983b92aa5f4d8",
+        "message": "Merge pull request #57 from konradthiemann/docs/spec-6-plan",
+        "date": "2026-09-02T23:41:02+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
-        "workflow": "Dependabot Updates",
+        "workflow": "Deploy Docs",
         "status": "completed",
-        "conclusion": "failure",
-        "updatedAt": "2026-08-17T04:25:04Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/31994349758"
+        "conclusion": "success",
+        "updatedAt": "2026-09-03T08:10:29Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/33731849456"
       }
     },
     {
@@ -279,11 +279,11 @@
         "author": "Konrad Thiemann"
       },
       "ci": {
-        "workflow": "CI",
+        "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T12:03:37Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33169424199"
+        "updatedAt": "2026-09-02T08:48:05Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33610638458"
       }
     },
     {
@@ -330,8 +330,8 @@
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-20T12:54:35Z",
-        "url": "https://github.com/konradthiemann/portfolio2/actions/runs/32371264094"
+        "updatedAt": "2026-09-02T19:59:14Z",
+        "url": "https://github.com/konradthiemann/portfolio2/actions/runs/33676510134"
       }
     }
   ],
@@ -450,6 +450,12 @@
   ],
   "skills": [
     {
+      "name": "bewerbung",
+      "description": "Erstellt ein maßgeschneidertes Bewerbungsanschreiben als einseitiges DIN-A4-PDF — recherchiert Firma und Stellenanzeige, gleicht sie gegen Konrads belegte Fakten ab (Zwischenzeugnis, LinkedIn-Empfehlungen, Codebase-Analyse, eigene Projekte) und schreibt in seinem Ton. Nutzen bei \"Bewerbung schreiben\", \"Anschreiben für <Firma>\", \"bewirb mich bei\", \"Anschreiben anpassen\", \"/bewerbung\".",
+      "triggerHint": "\"Bewerbung schreiben\", \"Anschreiben für <Firma>\", \"bewirb mich bei\", \"Anschreiben anpassen\", \"/bewerbung\".",
+      "example": null
+    },
+    {
       "name": "commit",
       "description": "Erstellt einen Commit im Workspace-Standard — Conventional Commit (type(scope): summary) mit Goal/Why/How-Body und Co-Author-Zeile, als ein fokussierter logischer Schritt. Nutzen, wenn Konrad \"commit\", \"commite das\", \"mach einen Commit\" oder Ähnliches sagt.",
       "triggerHint": "wenn Konrad \"commit\", \"commite das\", \"mach einen Commit\" oder Ähnliches sagt.",
@@ -478,6 +484,12 @@
       "description": "Erstellt eine Spec (Problem/Ziel, User Stories, Akzeptanzkriterien, Out of Scope) für ein Feature, bevor geplant oder implementiert wird — der erste Schritt von Spec-Driven Development. Nutzen bei \"spec\", \"Anforderungen aufschreiben\", \"spec-driven\", \"was soll das genau tun\", \"/spec\".",
       "triggerHint": "\"spec\", \"Anforderungen aufschreiben\", \"spec-driven\", \"was soll das genau tun\", \"/spec\".",
       "example": "Konrad: \"/spec Punkte-System für Waldbingo\" → fragt gezielt nach Zielgruppe/Randbedingungen, schreibt `specs/punkte-system.md` mit Akzeptanzkriterien, legt Konrad zur Freigabe vor, bevor geplant wird."
+    },
+    {
+      "name": "use-railway",
+      "description": ">",
+      "triggerHint": null,
+      "example": null
     },
     {
       "name": "worktree",
@@ -965,16 +977,16 @@
         "workflow": "Keep Supabase awake",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T11:29:44Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33167353849",
+        "updatedAt": "2026-09-01T06:05:35Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33476134988",
         "repo": "Pok-mon-TCG-Prize-Checker"
       },
       {
-        "workflow": "Dependabot Updates",
+        "workflow": "Deploy Docs",
         "status": "completed",
-        "conclusion": "failure",
-        "updatedAt": "2026-08-17T04:25:04Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/31994349758",
+        "conclusion": "success",
+        "updatedAt": "2026-09-03T08:10:29Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/33731849456",
         "repo": "Pokekon"
       },
       {
@@ -1010,19 +1022,19 @@
         "repo": "control-plane"
       },
       {
-        "workflow": "CI",
+        "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-28T12:03:37Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33169424199",
+        "updatedAt": "2026-09-02T08:48:05Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33610638458",
         "repo": "kassenbuch"
       },
       {
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-20T12:54:35Z",
-        "url": "https://github.com/konradthiemann/portfolio2/actions/runs/32371264094",
+        "updatedAt": "2026-09-02T19:59:14Z",
+        "url": "https://github.com/konradthiemann/portfolio2/actions/runs/33676510134",
         "repo": "portfolio2"
       }
     ]
