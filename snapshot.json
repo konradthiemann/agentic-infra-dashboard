@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T08:46:52.699Z",
+  "generatedAt": "2026-09-04T12:26:34.937Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
@@ -84,8 +84,8 @@
         "workflow": "Keep Supabase awake",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-01T06:05:35Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33476134988"
+        "updatedAt": "2026-09-04T10:07:32Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33861699635"
       }
     },
     {
@@ -101,17 +101,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "e35fbc217a5969bfe9f96d6e5b2983b92aa5f4d8",
-        "message": "Merge pull request #57 from konradthiemann/docs/spec-6-plan",
-        "date": "2026-09-02T23:41:02+02:00",
+        "sha": "9f249c54cb586e14b45613f356f774117b0782b8",
+        "message": "fix(web): stop showing the \"not enough data\" hint over an existing synthesis (#69)",
+        "date": "2026-09-04T11:57:37+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
-        "workflow": "Deploy Docs",
+        "workflow": "Deploy (Railway)",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-03T08:10:29Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/33731849456"
+        "updatedAt": "2026-09-04T10:05:59Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/33860896985"
       }
     },
     {
@@ -282,8 +282,8 @@
         "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-02T08:48:05Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33610638458"
+        "updatedAt": "2026-09-04T08:51:56Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33855485472"
       }
     },
     {
@@ -977,16 +977,16 @@
         "workflow": "Keep Supabase awake",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-01T06:05:35Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33476134988",
+        "updatedAt": "2026-09-04T10:07:32Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33861699635",
         "repo": "Pok-mon-TCG-Prize-Checker"
       },
       {
-        "workflow": "Deploy Docs",
+        "workflow": "Deploy (Railway)",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-03T08:10:29Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/33731849456",
+        "updatedAt": "2026-09-04T10:05:59Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/33860896985",
         "repo": "Pokekon"
       },
       {
@@ -1025,8 +1025,8 @@
         "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-02T08:48:05Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33610638458",
+        "updatedAt": "2026-09-04T08:51:56Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33855485472",
         "repo": "kassenbuch"
       },
       {
