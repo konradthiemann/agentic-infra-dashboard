@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T08:48:28.069Z",
+  "generatedAt": "2026-09-07T09:11:36.649Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
@@ -951,10 +951,77 @@
   "monitoring": {
     "tddGate": {
       "windowDays": 30,
-      "totalBlocks": 0,
-      "byRepo": {},
-      "byGate": {},
-      "recentEvents": []
+      "totalBlocks": 9,
+      "byRepo": {
+        "tmp.gcl4KNemvr": 1,
+        "tmp.cZBXR6GAsx": 1,
+        "tmp.Nb5lULEpvB": 1,
+        "tmp.lh5TdNkH6j": 1,
+        "tmp.RjTjAI0BxK": 1,
+        "tmp.VpeM4pMm9p": 1,
+        "tmp.Gb5PssaGsB": 1,
+        "tmp.EUQbacqUOS": 1,
+        "Pokekon__chore-docs-sync-automation": 1
+      },
+      "byGate": {
+        "docs": 9
+      },
+      "recentEvents": [
+        {
+          "timestamp": "2026-09-07T09:08:33.044663Z",
+          "repo": "Pokekon__chore-docs-sync-automation",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:06:54.989482Z",
+          "repo": "tmp.EUQbacqUOS",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:06:52.429649Z",
+          "repo": "tmp.Gb5PssaGsB",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T09:06:52.165647Z",
+          "repo": "tmp.VpeM4pMm9p",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:05:54.651542Z",
+          "repo": "tmp.RjTjAI0BxK",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:05:52.189248Z",
+          "repo": "tmp.lh5TdNkH6j",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T09:05:51.941583Z",
+          "repo": "tmp.Nb5lULEpvB",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:05:10.025786Z",
+          "repo": "tmp.cZBXR6GAsx",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T09:05:09.781758Z",
+          "repo": "tmp.gcl4KNemvr",
+          "gate": "docs",
+          "command": "git commit -m test"
+        }
+      ]
     },
     "ci": [
       {
