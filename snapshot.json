@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T09:26:05.339Z",
+  "generatedAt": "2026-09-07T17:56:26.865Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
@@ -22,17 +22,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "b3206c663bd05f18c94dc2c7f5536e3ac229c90f",
-        "message": "Merge pull request #70 from konradthiemann/docs/document-admin-crm-api",
-        "date": "2026-08-26T15:11:31+02:00",
+        "sha": "5e562cffc259acaec99b61f9335a3d7d6e1551b7",
+        "message": "fix(dashboard): count recurring savings withdrawals in available budget (#73)",
+        "date": "2026-09-07T16:29:43+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
         "workflow": "CI",
-        "status": "completed",
-        "conclusion": "success",
-        "updatedAt": "2026-08-26T13:16:10Z",
-        "url": "https://github.com/konradthiemann/Doewe/actions/runs/32972952129"
+        "status": "in_progress",
+        "conclusion": "",
+        "updatedAt": "2026-09-07T17:55:56Z",
+        "url": "https://github.com/konradthiemann/Doewe/actions/runs/34149595372"
       }
     },
     {
@@ -84,8 +84,8 @@
         "workflow": "Keep Supabase awake",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-04T10:07:32Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33861699635"
+        "updatedAt": "2026-09-07T10:58:51Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/34114221094"
       }
     },
     {
@@ -101,17 +101,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "29f135667195394c9c864874bfa8ad55dc941635",
-        "message": "chore(hooks): Spec 9 — Doku-Freshness-Gate (docs-sync-automation) (#71)",
-        "date": "2026-09-07T11:24:27+02:00",
+        "sha": "9afdc439e40d214d013d352c3fe29df369f0571d",
+        "message": "feat(ui): Button-/Aktions-Konsolidierung (#74)",
+        "date": "2026-09-07T15:03:36+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
-        "workflow": "Dependabot Updates",
+        "workflow": "CI",
         "status": "completed",
-        "conclusion": "failure",
-        "updatedAt": "2026-09-07T09:25:50Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/34105850334"
+        "conclusion": "success",
+        "updatedAt": "2026-09-07T13:15:35Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/34126156306"
       }
     },
     {
@@ -951,7 +951,7 @@
   "monitoring": {
     "tddGate": {
       "windowDays": 30,
-      "totalBlocks": 21,
+      "totalBlocks": 39,
       "byRepo": {
         "tmp.gcl4KNemvr": 1,
         "tmp.cZBXR6GAsx": 1,
@@ -973,12 +973,138 @@
         "tmp.CIFJEAGjSA": 1,
         "tmp.Z8Aiw5Oluj": 1,
         "tmp.yygNytXsUi": 1,
-        "tmp.ckqVR5bNm8": 1
+        "tmp.ckqVR5bNm8": 1,
+        "tmp.gkwCxwqQfu": 1,
+        "tmp.tolNival1e": 1,
+        "tmp.7USM8N7EXn": 1,
+        "tmp.SQa93YdjlE": 1,
+        "tmp.aybIsF9fRc": 1,
+        "tmp.kqwhzAduBR": 1,
+        "tmp.jE2c0I7iXT": 1,
+        "tmp.4vLqfOcqqS": 1,
+        "tmp.wrm9SzkwDs": 1,
+        "tmp.Wzg9UzJsib": 1,
+        "tmp.3E22Bc5gZW": 1,
+        "tmp.4zPwt49wxt": 1,
+        "tmp.Y0bmkMThOk": 1,
+        "tmp.H2eeC8wdUs": 1,
+        "tmp.4oRQCg1Zgj": 1,
+        "tmp.nrxHAqrPe3": 1,
+        "tmp.H5mo1LflJT": 1,
+        "tmp.MbuFz457ax": 1
       },
       "byGate": {
-        "docs": 21
+        "docs": 39
       },
       "recentEvents": [
+        {
+          "timestamp": "2026-09-07T12:58:02.369683Z",
+          "repo": "tmp.MbuFz457ax",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T12:57:59.769266Z",
+          "repo": "tmp.H5mo1LflJT",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T12:57:59.504412Z",
+          "repo": "tmp.nrxHAqrPe3",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T12:45:41.175761Z",
+          "repo": "tmp.4oRQCg1Zgj",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T12:45:38.475430Z",
+          "repo": "tmp.H2eeC8wdUs",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T12:45:38.201282Z",
+          "repo": "tmp.Y0bmkMThOk",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T12:40:23.366168Z",
+          "repo": "tmp.4zPwt49wxt",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T12:40:20.802349Z",
+          "repo": "tmp.3E22Bc5gZW",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T12:40:20.541371Z",
+          "repo": "tmp.Wzg9UzJsib",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T12:32:40.070084Z",
+          "repo": "tmp.wrm9SzkwDs",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T12:32:37.497811Z",
+          "repo": "tmp.4vLqfOcqqS",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T12:32:37.229515Z",
+          "repo": "tmp.jE2c0I7iXT",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T10:13:54.968988Z",
+          "repo": "tmp.kqwhzAduBR",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T10:13:52.242264Z",
+          "repo": "tmp.aybIsF9fRc",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T10:13:51.959404Z",
+          "repo": "tmp.SQa93YdjlE",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:42:50.500725Z",
+          "repo": "tmp.7USM8N7EXn",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:42:47.728594Z",
+          "repo": "tmp.tolNival1e",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T09:42:47.453571Z",
+          "repo": "tmp.gkwCxwqQfu",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
         {
           "timestamp": "2026-09-07T09:15:52.023933Z",
           "repo": "tmp.ckqVR5bNm8",
@@ -990,124 +1116,16 @@
           "repo": "tmp.yygNytXsUi",
           "gate": "docs",
           "command": "git commit --amend"
-        },
-        {
-          "timestamp": "2026-09-07T09:15:49.195392Z",
-          "repo": "tmp.Z8Aiw5Oluj",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:14:01.768368Z",
-          "repo": "tmp.CIFJEAGjSA",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:13:59.295608Z",
-          "repo": "tmp.3MjbtK76TW",
-          "gate": "docs",
-          "command": "git commit --amend"
-        },
-        {
-          "timestamp": "2026-09-07T09:13:59.043918Z",
-          "repo": "tmp.PtwrRaC4hZ",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:13:49.495450Z",
-          "repo": "tmp.IGI6BpIVEv",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:13:46.949013Z",
-          "repo": "tmp.Lvq1hoaCwW",
-          "gate": "docs",
-          "command": "git commit --amend"
-        },
-        {
-          "timestamp": "2026-09-07T09:13:46.683338Z",
-          "repo": "tmp.9fPg5TehK7",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:11:43.607638Z",
-          "repo": "tmp.JJh1kf9yU9",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:11:41.164174Z",
-          "repo": "tmp.MJLwjI9CQ7",
-          "gate": "docs",
-          "command": "git commit --amend"
-        },
-        {
-          "timestamp": "2026-09-07T09:11:40.917025Z",
-          "repo": "tmp.Eqm4VCht7t",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:08:33.044663Z",
-          "repo": "Pokekon__chore-docs-sync-automation",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:06:54.989482Z",
-          "repo": "tmp.EUQbacqUOS",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:06:52.429649Z",
-          "repo": "tmp.Gb5PssaGsB",
-          "gate": "docs",
-          "command": "git commit --amend"
-        },
-        {
-          "timestamp": "2026-09-07T09:06:52.165647Z",
-          "repo": "tmp.VpeM4pMm9p",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:05:54.651542Z",
-          "repo": "tmp.RjTjAI0BxK",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:05:52.189248Z",
-          "repo": "tmp.lh5TdNkH6j",
-          "gate": "docs",
-          "command": "git commit --amend"
-        },
-        {
-          "timestamp": "2026-09-07T09:05:51.941583Z",
-          "repo": "tmp.Nb5lULEpvB",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-07T09:05:10.025786Z",
-          "repo": "tmp.cZBXR6GAsx",
-          "gate": "docs",
-          "command": "git commit --amend"
         }
       ]
     },
     "ci": [
       {
         "workflow": "CI",
-        "status": "completed",
-        "conclusion": "success",
-        "updatedAt": "2026-08-26T13:16:10Z",
-        "url": "https://github.com/konradthiemann/Doewe/actions/runs/32972952129",
+        "status": "in_progress",
+        "conclusion": "",
+        "updatedAt": "2026-09-07T17:55:56Z",
+        "url": "https://github.com/konradthiemann/Doewe/actions/runs/34149595372",
         "repo": "Doewe"
       },
       {
@@ -1122,16 +1140,16 @@
         "workflow": "Keep Supabase awake",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-04T10:07:32Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/33861699635",
+        "updatedAt": "2026-09-07T10:58:51Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/34114221094",
         "repo": "Pok-mon-TCG-Prize-Checker"
       },
       {
-        "workflow": "Dependabot Updates",
+        "workflow": "CI",
         "status": "completed",
-        "conclusion": "failure",
-        "updatedAt": "2026-09-07T09:25:50Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/34105850334",
+        "conclusion": "success",
+        "updatedAt": "2026-09-07T13:15:35Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/34126156306",
         "repo": "Pokekon"
       },
       {
