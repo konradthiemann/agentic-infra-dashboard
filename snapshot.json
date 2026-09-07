@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T12:26:34.937Z",
+  "generatedAt": "2026-09-07T08:48:28.069Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
@@ -101,17 +101,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "9f249c54cb586e14b45613f356f774117b0782b8",
-        "message": "fix(web): stop showing the \"not enough data\" hint over an existing synthesis (#69)",
-        "date": "2026-09-04T11:57:37+02:00",
+        "sha": "8f09c954d0df6b88872d0ada0aa91a027cca0a10",
+        "message": "docs(spec): resolve Spec 9's open questions (#70)",
+        "date": "2026-09-07T10:21:50+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
-        "workflow": "Deploy (Railway)",
+        "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-04T10:05:59Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/33860896985"
+        "updatedAt": "2026-09-07T08:24:12Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/34100198009"
       }
     },
     {
@@ -282,8 +282,8 @@
         "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-04T08:51:56Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33855485472"
+        "updatedAt": "2026-09-06T08:41:13Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/34022538755"
       }
     },
     {
@@ -982,11 +982,11 @@
         "repo": "Pok-mon-TCG-Prize-Checker"
       },
       {
-        "workflow": "Deploy (Railway)",
+        "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-04T10:05:59Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/33860896985",
+        "updatedAt": "2026-09-07T08:24:12Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/34100198009",
         "repo": "Pokekon"
       },
       {
@@ -1025,8 +1025,8 @@
         "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-04T08:51:56Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/33855485472",
+        "updatedAt": "2026-09-06T08:41:13Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/34022538755",
         "repo": "kassenbuch"
       },
       {
