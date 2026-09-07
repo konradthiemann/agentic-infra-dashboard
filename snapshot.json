@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T09:11:36.649Z",
+  "generatedAt": "2026-09-07T09:26:05.339Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
@@ -101,17 +101,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "8f09c954d0df6b88872d0ada0aa91a027cca0a10",
-        "message": "docs(spec): resolve Spec 9's open questions (#70)",
-        "date": "2026-09-07T10:21:50+02:00",
+        "sha": "29f135667195394c9c864874bfa8ad55dc941635",
+        "message": "chore(hooks): Spec 9 — Doku-Freshness-Gate (docs-sync-automation) (#71)",
+        "date": "2026-09-07T11:24:27+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
-        "workflow": "CI",
+        "workflow": "Dependabot Updates",
         "status": "completed",
-        "conclusion": "success",
-        "updatedAt": "2026-09-07T08:24:12Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/34100198009"
+        "conclusion": "failure",
+        "updatedAt": "2026-09-07T09:25:50Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/34105850334"
       }
     },
     {
@@ -282,8 +282,8 @@
         "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-06T08:41:13Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/34022538755"
+        "updatedAt": "2026-09-07T09:23:06Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/34105688497"
       }
     },
     {
@@ -951,7 +951,7 @@
   "monitoring": {
     "tddGate": {
       "windowDays": 30,
-      "totalBlocks": 9,
+      "totalBlocks": 21,
       "byRepo": {
         "tmp.gcl4KNemvr": 1,
         "tmp.cZBXR6GAsx": 1,
@@ -961,12 +961,96 @@
         "tmp.VpeM4pMm9p": 1,
         "tmp.Gb5PssaGsB": 1,
         "tmp.EUQbacqUOS": 1,
-        "Pokekon__chore-docs-sync-automation": 1
+        "Pokekon__chore-docs-sync-automation": 1,
+        "tmp.Eqm4VCht7t": 1,
+        "tmp.MJLwjI9CQ7": 1,
+        "tmp.JJh1kf9yU9": 1,
+        "tmp.9fPg5TehK7": 1,
+        "tmp.Lvq1hoaCwW": 1,
+        "tmp.IGI6BpIVEv": 1,
+        "tmp.PtwrRaC4hZ": 1,
+        "tmp.3MjbtK76TW": 1,
+        "tmp.CIFJEAGjSA": 1,
+        "tmp.Z8Aiw5Oluj": 1,
+        "tmp.yygNytXsUi": 1,
+        "tmp.ckqVR5bNm8": 1
       },
       "byGate": {
-        "docs": 9
+        "docs": 21
       },
       "recentEvents": [
+        {
+          "timestamp": "2026-09-07T09:15:52.023933Z",
+          "repo": "tmp.ckqVR5bNm8",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:15:49.458588Z",
+          "repo": "tmp.yygNytXsUi",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T09:15:49.195392Z",
+          "repo": "tmp.Z8Aiw5Oluj",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:14:01.768368Z",
+          "repo": "tmp.CIFJEAGjSA",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:13:59.295608Z",
+          "repo": "tmp.3MjbtK76TW",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T09:13:59.043918Z",
+          "repo": "tmp.PtwrRaC4hZ",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:13:49.495450Z",
+          "repo": "tmp.IGI6BpIVEv",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:13:46.949013Z",
+          "repo": "tmp.Lvq1hoaCwW",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T09:13:46.683338Z",
+          "repo": "tmp.9fPg5TehK7",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:11:43.607638Z",
+          "repo": "tmp.JJh1kf9yU9",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-09-07T09:11:41.164174Z",
+          "repo": "tmp.MJLwjI9CQ7",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-09-07T09:11:40.917025Z",
+          "repo": "tmp.Eqm4VCht7t",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
         {
           "timestamp": "2026-09-07T09:08:33.044663Z",
           "repo": "Pokekon__chore-docs-sync-automation",
@@ -1014,12 +1098,6 @@
           "repo": "tmp.cZBXR6GAsx",
           "gate": "docs",
           "command": "git commit --amend"
-        },
-        {
-          "timestamp": "2026-09-07T09:05:09.781758Z",
-          "repo": "tmp.gcl4KNemvr",
-          "gate": "docs",
-          "command": "git commit -m test"
         }
       ]
     },
@@ -1049,11 +1127,11 @@
         "repo": "Pok-mon-TCG-Prize-Checker"
       },
       {
-        "workflow": "CI",
+        "workflow": "Dependabot Updates",
         "status": "completed",
-        "conclusion": "success",
-        "updatedAt": "2026-09-07T08:24:12Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/34100198009",
+        "conclusion": "failure",
+        "updatedAt": "2026-09-07T09:25:50Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/34105850334",
         "repo": "Pokekon"
       },
       {
@@ -1092,8 +1170,8 @@
         "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-06T08:41:13Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/34022538755",
+        "updatedAt": "2026-09-07T09:23:06Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/34105688497",
         "repo": "kassenbuch"
       },
       {
