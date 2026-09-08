@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T17:56:26.865Z",
+  "generatedAt": "2026-09-08T09:51:41.623Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 8,
@@ -22,17 +22,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "5e562cffc259acaec99b61f9335a3d7d6e1551b7",
-        "message": "fix(dashboard): count recurring savings withdrawals in available budget (#73)",
-        "date": "2026-09-07T16:29:43+02:00",
+        "sha": "32c75bd6e3537f6b92963353c5981fb7da99df86",
+        "message": "fix(recurring): exclude the public demo account from auto-booking (#75)",
+        "date": "2026-09-07T20:32:40+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
         "workflow": "CI",
-        "status": "in_progress",
-        "conclusion": "",
-        "updatedAt": "2026-09-07T17:55:56Z",
-        "url": "https://github.com/konradthiemann/Doewe/actions/runs/34149595372"
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-09-07T18:35:44Z",
+        "url": "https://github.com/konradthiemann/Doewe/actions/runs/34152056945"
       }
     },
     {
@@ -282,8 +282,8 @@
         "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-07T09:23:06Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/34105688497"
+        "updatedAt": "2026-09-08T08:53:19Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/34206946172"
       }
     },
     {
@@ -1122,10 +1122,10 @@
     "ci": [
       {
         "workflow": "CI",
-        "status": "in_progress",
-        "conclusion": "",
-        "updatedAt": "2026-09-07T17:55:56Z",
-        "url": "https://github.com/konradthiemann/Doewe/actions/runs/34149595372",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-09-07T18:35:44Z",
+        "url": "https://github.com/konradthiemann/Doewe/actions/runs/34152056945",
         "repo": "Doewe"
       },
       {
@@ -1188,8 +1188,8 @@
         "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-09-07T09:23:06Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/34105688497",
+        "updatedAt": "2026-09-08T08:53:19Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/34206946172",
         "repo": "kassenbuch"
       },
       {
