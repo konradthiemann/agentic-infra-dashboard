@@ -4,10 +4,10 @@ export interface ParsedMarkdown {
 }
 
 /**
- * Minimal frontmatter parser for our own SKILL.md/agent files: flat
- * `key: value` pairs between `---` delimiters, no nested structures.
- * Intentionally not a full YAML parser — these files are hand-written and
- * simple by convention (see .claude/rules).
+ * Minimal frontmatter parser for SKILL.md/agent files: flat `key: value`
+ * pairs between `---` delimiters, plus `>`/`|` block scalars (installed
+ * plugin skills like use-railway use them for long descriptions). No nested
+ * structures — intentionally not a full YAML parser.
  */
 export function parseFrontmatter(raw: string): ParsedMarkdown {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
@@ -16,11 +16,24 @@ export function parseFrontmatter(raw: string): ParsedMarkdown {
   }
   const [, fmBlock, body] = match;
   const frontmatter: Record<string, string> = {};
-  for (const line of fmBlock.split("\n")) {
-    const lineMatch = line.match(/^([a-zA-Z0-9_-]+):\s*(.*)$/);
+  const lines = fmBlock.split(/\r?\n/);
+  for (let i = 0; i < lines.length; i++) {
+    const lineMatch = lines[i].match(/^([a-zA-Z0-9_-]+):\s*(.*)$/);
     if (!lineMatch) continue;
     const [, key, value] = lineMatch;
-    frontmatter[key] = value.trim();
+    const blockScalar = value.trim().match(/^([>|])[+-]?$/);
+    if (!blockScalar) {
+      frontmatter[key] = value.trim();
+      continue;
+    }
+    const blockLines: string[] = [];
+    while (i + 1 < lines.length && (lines[i + 1].trim() === "" || /^\s/.test(lines[i + 1]))) {
+      blockLines.push(lines[++i].trim());
+    }
+    frontmatter[key] =
+      blockScalar[1] === ">"
+        ? blockLines.filter(Boolean).join(" ")
+        : blockLines.join("\n").trim();
   }
   return { frontmatter, body: body.trim() };
 }

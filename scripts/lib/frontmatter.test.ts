@@ -23,6 +23,30 @@ describe("parseFrontmatter", () => {
     const { frontmatter } = parseFrontmatter(raw);
     expect(frontmatter.description).toBe("Nutzen bei: X, Y oder Z.");
   });
+
+  it("folds a `>` block scalar into one space-joined line", () => {
+    const raw = [
+      "---",
+      "name: use-railway",
+      "description: >",
+      "  Operate Railway infrastructure:",
+      "  deploy code, manage domains.",
+      "---",
+      "body",
+    ].join("\n");
+    const { frontmatter } = parseFrontmatter(raw);
+    expect(frontmatter.name).toBe("use-railway");
+    expect(frontmatter.description).toBe("Operate Railway infrastructure: deploy code, manage domains.");
+  });
+
+  it("keeps the line breaks of a `|` block scalar and reads keys after it", () => {
+    const raw = ["---", "description: |-", "  line one", "  line two", "model: sonnet", "---", "body"].join(
+      "\n",
+    );
+    const { frontmatter } = parseFrontmatter(raw);
+    expect(frontmatter.description).toBe("line one\nline two");
+    expect(frontmatter.model).toBe("sonnet");
+  });
 });
 
 describe("firstHeading", () => {
@@ -49,7 +73,7 @@ describe("firstParagraph", () => {
 
 describe("summarizeRuleMarkdown", () => {
   it("uses the frontmatter description as summary, not the raw frontmatter block", () => {
-    // Real shape of e.g. .claude/rules/code-style.md — description in
+    // Real shape of e.g. the former .claude/rules/code-style.md — description in
     // frontmatter, heading + body below it.
     const raw = [
       "---",
