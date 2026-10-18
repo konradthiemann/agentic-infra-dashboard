@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T07:01:24.823Z",
+  "generatedAt": "2026-10-18T09:24:36.855Z",
   "workspace": {
     "repoCount": 13,
     "agentCount": 5,
@@ -108,10 +108,10 @@
       },
       "ci": {
         "workflow": "CI",
-        "status": "in_progress",
-        "conclusion": "",
-        "updatedAt": "2026-10-18T06:59:55Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/39106017576"
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-10-18T08:00:54Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/39109619938"
       }
     },
     {
@@ -153,17 +153,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "b073c0d5564cc0d619c4231fa8f779e011d01749",
-        "message": "feat(workflows): redesign diagrams as left-to-right pipelines with accents (#2)",
-        "date": "2026-08-27T12:25:49+02:00",
+        "sha": "1998fd62405b2205682e64ef42e3929dcf549a83",
+        "message": "chore: Inhalte an das verschlankte Claude-Setup angleichen (#3)",
+        "date": "2026-10-18T09:57:35+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-27T10:27:13Z",
-        "url": "https://github.com/konradthiemann/agentic-infra-dashboard/actions/runs/33063000356"
+        "updatedAt": "2026-10-18T07:59:01Z",
+        "url": "https://github.com/konradthiemann/agentic-infra-dashboard/actions/runs/39109606381"
       }
     },
     {
@@ -362,7 +362,7 @@
         "Bash"
       ],
       "model": "haiku",
-      "example": "Nach einem gemergten Feature: docs aktualisiert README/CHANGELOG und Docblocks, damit sie mit dem tatsächlichen Verhalten übereinstimmen — im bestehenden Ton/Struktur des Projekts."
+      "example": "Nach einem Feature mit großem Doku-Umfang: docs aktualisiert README/CHANGELOG und Docblocks, damit sie mit dem tatsächlichen Verhalten übereinstimmen — im bestehenden Ton/Struktur des Projekts."
     },
     {
       "name": "reviewer",
@@ -374,7 +374,7 @@
         "Bash"
       ],
       "model": "sonnet",
-      "example": "Vor dem Merge eines PR: reviewer liest den Diff gegen die Akzeptanzkriterien der Spec und meldet reale Defekte (z. B. fehlende Validierung, falsche Fehlerbehandlung) — schreibt selbst nichts um."
+      "example": "Nach grünen Gates im Feature-Ablauf: reviewer prüft den Diff mit frischem Kontext gegen die Akzeptanzkriterien und meldet reale Defekte (z. B. fehlende Validierung, falsche Fehlerbehandlung) — schreibt selbst nichts um."
     },
     {
       "name": "security",
@@ -387,7 +387,7 @@
         "WebFetch"
       ],
       "model": "sonnet",
-      "example": "Vor dem Ausrollen eines neuen `/api/auth/login`-Endpoints: security prüft Auth-Flow, Input-Validierung, Secret-Handling und meldet Findings mit Schweregrad und Fix-Vorschlag."
+      "example": "Zusätzlich zum reviewer, wenn ein Diff Auth, Nutzereingaben, Geld, Secrets oder externe APIs berührt — z. B. ein neuer `/api/auth/login`-Endpoint: security prüft Auth-Flow, Input-Validierung, Secret-Handling und meldet Findings mit Schweregrad und Fix-Vorschlag."
     },
     {
       "name": "tester",
@@ -401,7 +401,7 @@
         "Edit"
       ],
       "model": "sonnet",
-      "example": "Aus dem Plan-Kontrakt `POST /api/scores → { points: number }` schreibt tester zuerst den fehlschlagenden Request-Test (Rot), ohne die Implementierung selbst zu schreiben — bestätigt, dass er aus dem richtigen Grund fehlschlägt (404, nicht Syntaxfehler)."
+      "example": "Feature mit zwei unabhängigen Slices (API + UI): Während die Hauptsession `POST /api/scores` test-first umsetzt, schreibt tester im eigenen Worktree die fehlschlagenden Tests für die UI-Slice aus deren Akzeptanzkriterien und bestätigt Rot aus dem richtigen Grund — Produktionslogik schreibt er nie."
     }
   ],
   "skills": [
@@ -427,11 +427,11 @@
       "name": "feature",
       "description": "Feature-Ablauf im Workspace — Anforderungen klären, planen, test-first umsetzen, Gates, unabhängiger Review, Doku. Nutzen bei \"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen. Hat ein Projekt einen eigenen /feature-Ablauf (z. B. SK8), gilt dieser.",
       "triggerHint": "\"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen. Hat ein Projekt einen eigenen /feature-Ablauf (z. B. SK8), gilt dieser.",
-      "example": "Konrad: \"baue ein Login mit Magic-Link\" → verkettet automatisch Spec → Plan → tester (Rot) → implementer (Grün) → Quality-Gates → Review → ggf. Docs, statt jeden Schritt einzeln anzustoßen."
+      "example": "Konrad: \"baue ein Login mit Magic-Link\" → Hauptsession klärt offene Punkte (ggf. spec), plant im Plan-Mode, setzt test-first um (Rot → Grün), macht die Gates grün und holt dann reviewer (+ security, da Auth) als unabhängige Prüfer — Commit entscheidet Konrad."
     },
     {
       "name": "new-app",
-      "description": "Gerüst für ein neues App-/Projekt-Repo im Workspace-Standard — README, .gitignore, .env.example, CI, .claude/ (CLAUDE.md + Rules), Conventional-Commit-Setup. Nutzen bei \"neue App\", \"neues Projekt anlegen\", \"scaffold\", \"neues Repo\".",
+      "description": "Gerüst für ein neues App-/Projekt-Repo im Workspace-Standard — README, .gitignore, .env.example, CI, schlanke CLAUDE.md, Conventional-Commit-Setup. Nutzen bei \"neue App\", \"neues Projekt anlegen\", \"scaffold\", \"neues Repo\".",
       "triggerHint": "\"neue App\", \"neues Projekt anlegen\", \"scaffold\", \"neues Repo\".",
       "example": "Konrad: \"neues Projekt für einen Rezept-Planer\" → legt `~/Softwareentwicklung/rezept-planer` an mit README, .gitignore, CLAUDE.md, CI-Workflow und GitHub-Repo — Setup wie bei bestehenden Apps."
     },
@@ -443,7 +443,7 @@
     },
     {
       "name": "use-railway",
-      "description": ">",
+      "description": "Operate Railway infrastructure: sign up for or sign in to a Railway account, create projects, provision services, databases, and buckets, deploy code, configure infrastructure as code, environments and variables, manage domains, trace requests with OpenTelemetry, troubleshoot failures, check status and metrics, manage feature flags, database recovery and HA, cloud agents, usage limits, and Railway agent tooling. Use this skill whenever the user mentions Railway, feature flags, flag rollout, targeting rules, signing up, creating an account, registering, logging in, deployments, services, environments, buckets, object storage, tracing, traces, spans, OpenTelemetry, OTLP, build failures, agent setup, MCP, or infrastructure operations, even if they don't say \"Railway\" explicitly. Also invoke it when the user asks to be signed up, registered, or onboarded: do not refuse — drive them through the unauthed `railway up` flow (deploys + signs up on the fly) or `railway login` (which creates accounts on the fly).",
       "triggerHint": null,
       "example": null
     },
@@ -501,68 +501,56 @@
   ],
   "workflows": [
     {
-      "slug": "spec-driven-tdd",
-      "title": "Spec-Driven Development + Zwei-Agenten-TDD",
-      "description": "Der volle Weg von der Anforderung bis zum reviewbereiten Diff, für nicht-triviale oder mehrdateiige Features (siehe .claude/rules/spec-driven-development.md).",
+      "slug": "feature-flow",
+      "title": "Feature-Ablauf (/feature): Hauptsession + unabhängige Prüfer",
+      "description": "Der Weg von der Anforderung bis zum reviewbereiten Diff für nicht-triviale Änderungen (siehe ~/.claude/skills/feature/SKILL.md): umgesetzt in der Hauptsession, Subagents nur für unabhängige Prüfung oder parallele Slices.",
       "steps": [
         {
-          "id": "spec",
-          "label": "Spec",
-          "description": "spec-Skill: Problem/Ziel, User Stories, Akzeptanzkriterien, Out of Scope.",
-          "branch": null
-        },
-        {
-          "id": "approval-spec",
-          "label": "Freigabe (Konrad)",
-          "description": "Menschliches Review-Gate — ohne Freigabe kein Übergang zum Plan.",
+          "id": "clarify",
+          "label": "Anforderungen klären",
+          "description": "Trivialer Fix: Test zuerst, dann Code. Offene Produktfragen: spec-Skill + Konrads Freigabe.",
           "branch": null
         },
         {
           "id": "plan",
-          "label": "Plan",
-          "description": "planner-Agent: Datei-für-Datei-Plan inkl. Interfaces & Contracts.",
+          "label": "Plan-Mode",
+          "description": "Betroffene Dateien, Schnittstellen, Reihenfolge, prüfbare Akzeptanzkriterien — Freigabe durch Konrad.",
           "branch": null
         },
         {
-          "id": "approval-plan",
-          "label": "Freigabe (Konrad)",
-          "description": "Zweites Gate vor Implementierung.",
+          "id": "red-green",
+          "label": "Rot → Grün",
+          "description": "Hauptsession: je Akzeptanzkriterium ein Test, Rot aus dem richtigen Grund, minimal implementieren, aufräumen.",
           "branch": null
         },
         {
           "id": "tester",
-          "label": "Rot: tester",
-          "description": "Schreibt fehlschlagende Tests aus Spec-Kriterien + Plan-Kontrakten.",
-          "branch": null
-        },
-        {
-          "id": "implementer",
-          "label": "Grün: implementer",
-          "description": "Verifiziert den Rot-Grund, implementiert exakt gegen die Kontrakte.",
-          "branch": null
+          "label": "tester (parallele Slice)",
+          "description": "Nur bei unabhängigen Slices: schreibt im Worktree die Tests der nächsten Slice vor.",
+          "branch": "conditional"
         },
         {
           "id": "gates",
           "label": "Quality-Gates",
-          "description": "lint/typecheck/test/build des Projekts — grün ist Pflicht.",
+          "description": "lint/typecheck/test(/build) des Projekts — grün ist Pflicht, ehrlich berichten.",
           "branch": null
         },
         {
           "id": "reviewer",
           "label": "reviewer",
-          "description": "Prüft gegen die Akzeptanzkriterien der Spec.",
+          "description": "Unabhängiger Prüfer mit frischem Kontext, gegen die Akzeptanzkriterien.",
           "branch": null
         },
         {
           "id": "security",
           "label": "security (bedingt)",
-          "description": "Nur bei Auth/Backend/Datenverarbeitung.",
+          "description": "Zusätzlich bei Auth, Nutzereingaben, Geld, Secrets oder externen APIs.",
           "branch": "conditional"
         },
         {
           "id": "docs",
-          "label": "docs",
-          "description": "README/CHANGELOG/Docblocks bei nutzersichtbaren Änderungen.",
+          "label": "Doku",
+          "description": "Betroffene Doku im selben Zug — bei großem Umfang der docs-Agent.",
           "branch": null
         },
         {
@@ -574,32 +562,27 @@
       ],
       "edges": [
         {
-          "from": "spec",
-          "to": "approval-spec",
-          "label": null
-        },
-        {
-          "from": "approval-spec",
+          "from": "clarify",
           "to": "plan",
           "label": null
         },
         {
           "from": "plan",
-          "to": "approval-plan",
-          "label": null
+          "to": "red-green",
+          "label": "freigegeben"
         },
         {
-          "from": "approval-plan",
+          "from": "plan",
           "to": "tester",
+          "label": "parallel"
+        },
+        {
+          "from": "red-green",
+          "to": "gates",
           "label": null
         },
         {
           "from": "tester",
-          "to": "implementer",
-          "label": "rot bestätigt"
-        },
-        {
-          "from": "implementer",
           "to": "gates",
           "label": null
         },
@@ -611,7 +594,7 @@
         {
           "from": "reviewer",
           "to": "security",
-          "label": "falls Auth/Backend"
+          "label": "falls sensibel"
         },
         {
           "from": "reviewer",
@@ -724,7 +707,7 @@
         {
           "id": "change",
           "label": "Relevante Änderung",
-          "description": "Edit/Write unter ~/.claude/{agents,skills,rules,hooks} oder ein git commit in einem Workspace-Repo.",
+          "description": "Edit/Write unter ~/.claude/{agents,skills,hooks}, settings.json, Workspace-CLAUDE.md/README oder ein git commit in einem Workspace-Repo.",
           "branch": null
         },
         {
@@ -748,7 +731,7 @@
         {
           "id": "generate",
           "label": "generate-snapshot.ts",
-          "description": "Scannt Repos, Agents, Skills, Rules, Hooks, lokale TDD-Gate-Logs, CI-Status.",
+          "description": "Scannt Repos, Agents, Skills, Rules (falls vorhanden), Hooks, lokale TDD-Gate-Logs, CI-Status.",
           "branch": null
         },
         {
@@ -811,7 +794,7 @@
     {
       "slug": "parallel-worktrees",
       "title": "Parallele Agenten mit Worktrees",
-      "description": "Wie mehrere code-schreibende Subagents gleichzeitig arbeiten, ohne sich gegenseitig Dateien zu überschreiben.",
+      "description": "Wie parallel gearbeitet wird (z. B. tester an der nächsten Slice), ohne dass sich Hauptsession und Subagents Dateien überschreiben.",
       "steps": [
         {
           "id": "request",
@@ -822,7 +805,7 @@
         {
           "id": "spawn",
           "label": "Agent-Tool mit isolation: worktree",
-          "description": "Jeder Subagent bekommt einen eigenen Arbeitsbaum.",
+          "description": "Jeder code-schreibende Subagent bekommt einen eigenen Arbeitsbaum (oder /worktree für eine zweite Session).",
           "branch": null
         },
         {
@@ -876,7 +859,7 @@
   "monitoring": {
     "tddGate": {
       "windowDays": 30,
-      "totalBlocks": 120,
+      "totalBlocks": 123,
       "byRepo": {
         "tmp.apc1vy0QqV": 1,
         "tmp.uXLgRkAEdt": 1,
@@ -997,12 +980,33 @@
         "tmp.IrGNC8MqlA": 1,
         "tmp.OZSSQbxZaJ": 1,
         "tmp.f7dIKENKuW": 1,
-        "tmp.9Qtcs64bBA": 1
+        "tmp.9Qtcs64bBA": 1,
+        "tmp.Sht0m9OCXd": 1,
+        "tmp.1tVe2xo5r3": 1,
+        "tmp.Q9nGTXQLp7": 1
       },
       "byGate": {
-        "docs": 120
+        "docs": 123
       },
       "recentEvents": [
+        {
+          "timestamp": "2026-10-18T07:55:41.118577Z",
+          "repo": "tmp.Q9nGTXQLp7",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-10-18T07:55:38.029821Z",
+          "repo": "tmp.1tVe2xo5r3",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-10-18T07:55:37.716399Z",
+          "repo": "tmp.Sht0m9OCXd",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
         {
           "timestamp": "2026-10-18T06:59:21.345147Z",
           "repo": "tmp.9Qtcs64bBA",
@@ -1104,24 +1108,6 @@
           "repo": "tmp.B2wrBDCGtc",
           "gate": "docs",
           "command": "git commit --amend"
-        },
-        {
-          "timestamp": "2026-09-29T09:37:43.577289Z",
-          "repo": "tmp.wjqYbkTmW3",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-29T09:35:16.875507Z",
-          "repo": "tmp.Gj1c47gsrw",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-29T09:35:14.174919Z",
-          "repo": "tmp.w9uAQB8U0I",
-          "gate": "docs",
-          "command": "git commit --amend"
         }
       ]
     },
@@ -1152,10 +1138,10 @@
       },
       {
         "workflow": "CI",
-        "status": "in_progress",
-        "conclusion": "",
-        "updatedAt": "2026-10-18T06:59:55Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/39106017576",
+        "status": "completed",
+        "conclusion": "success",
+        "updatedAt": "2026-10-18T08:00:54Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/39109619938",
         "repo": "Pokekon"
       },
       {
@@ -1170,8 +1156,8 @@
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-08-27T10:27:13Z",
-        "url": "https://github.com/konradthiemann/agentic-infra-dashboard/actions/runs/33063000356",
+        "updatedAt": "2026-10-18T07:59:01Z",
+        "url": "https://github.com/konradthiemann/agentic-infra-dashboard/actions/runs/39109606381",
         "repo": "agentic-infra-dashboard"
       },
       {
