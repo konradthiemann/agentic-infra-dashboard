@@ -12,7 +12,7 @@ const SECTION_LINKS = [
   {
     href: "/workflows",
     label: "Workflows",
-    description: "Kern-Abläufe (Spec→Plan→Tester→Implementer, TDD-Gate, Dashboard-Sync) als Diagramm.",
+    description: "Kern-Abläufe (Feature-Ablauf, TDD-Gate, Dashboard-Sync, Worktrees) als Diagramm.",
   },
   {
     href: "/monitoring",

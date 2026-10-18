@@ -13,9 +13,10 @@ export const skillExamples: Record<string, string> = {
     "Handlungsbedarf, Schule, Bewerbungen, Verkäufe/Signups, Belege — " +
     "read-only, nichts wird gesendet oder gelöscht.",
   feature:
-    "Konrad: \"baue ein Login mit Magic-Link\" → verkettet automatisch " +
-    "Spec → Plan → tester (Rot) → implementer (Grün) → Quality-Gates → " +
-    "Review → ggf. Docs, statt jeden Schritt einzeln anzustoßen.",
+    "Konrad: \"baue ein Login mit Magic-Link\" → Hauptsession klärt offene " +
+    "Punkte (ggf. spec), plant im Plan-Mode, setzt test-first um (Rot → Grün), " +
+    "macht die Gates grün und holt dann reviewer (+ security, da Auth) als " +
+    "unabhängige Prüfer — Commit entscheidet Konrad.",
   "new-app":
     "Konrad: \"neues Projekt für einen Rezept-Planer\" → legt " +
     "`~/Softwareentwicklung/rezept-planer` an mit README, .gitignore, " +

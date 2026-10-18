@@ -1,20 +1,22 @@
 # Agentic Infra Dashboard
 
 Meta-Dashboard über Konrads KI-Agentik-Engineering-Infrastruktur: Repos im
-`~/Softwareentwicklung`-Workspace, globale Claude-Code-Agents/Skills/Rules/Hooks,
-Abläufe (Spec→Plan→Tester→Implementer, TDD-Gate, Worktrees) und ein einfaches
-Monitoring (TDD-Gate-Blocks, CI-Status je Repo). Zweck: die Agentik-Infrastruktur
-selbst sichtbar und verbesserbar machen — **kein** Business-/Umsatz-Dashboard
-(das ist `control-plane`).
+`~/Softwareentwicklung`-Workspace, globale Claude-Code-Agents/Skills/Hooks,
+Workspace-Rules (falls vorhanden), Abläufe (Feature-Ablauf, TDD-Gate, Worktrees)
+und ein einfaches Monitoring (TDD-Gate-Blocks, CI-Status je Repo). Zweck: die
+Agentik-Infrastruktur selbst sichtbar und verbesserbar machen — **kein**
+Business-/Umsatz-Dashboard (das ist `control-plane`).
 
 ## Stack
 Next.js 15 (App Router) · TypeScript strict · Tailwind CSS · Vitest + Testing Library
 
 ## Architektur: Wie die Daten aktuell bleiben
-Die Rohdaten (Repos, `~/.claude/agents`, `~/.claude/skills`, `~/.claude/rules`,
-lokale TDD-Gate-Logs) liegen **nur lokal** auf Konrads Mac. Diese App läuft
-**remote** auf Railway und hat keinen Zugriff darauf. Lösung, ohne `main`-Schutz
-zu verletzen und ohne Redeploy bei jedem Daten-Update:
+Die Rohdaten (Repos, `~/.claude/agents`, `~/.claude/skills`, `~/.claude/hooks`,
+`~/Softwareentwicklung/.claude/rules` — seit 2026-10-18 nicht mehr vorhanden, der
+Scanner liefert dann `[]` —, lokale TDD-Gate-Logs) liegen **nur lokal** auf
+Konrads Mac. Diese App läuft **remote** auf Railway und hat keinen Zugriff
+darauf. Lösung, ohne `main`-Schutz zu verletzen und ohne Redeploy bei jedem
+Daten-Update:
 
 1. `scripts/generate-snapshot.ts` scannt den Workspace + `~/.claude/*` und
    `~/.claude/logs/agentic-events.jsonl` und schreibt `snapshot.json`
@@ -38,8 +40,11 @@ für die volle Begründung.
 ## Struktur
 - `src/app/` — Seiten (Overview, Repos, Agents & Skills, Workflows, Monitoring)
 - `src/lib/snapshot-schema.ts` — geteiltes Datenschema (Zod), von Generator + App genutzt
-- `src/content/` — kuratierte Inhalte, die sich nicht zuverlässig scannen lassen
-  (z. B. Skill-/Agent-Anwendungsbeispiele, Workflow-Diagramm-Definitionen)
+- `scripts/content/` — kuratierte Inhalte, die sich nicht zuverlässig scannen lassen
+  (z. B. Skill-/Agent-Anwendungsbeispiele, Workflow-Diagramm-Definitionen).
+  Ändert sich hier etwas, die betroffenen Abschnitte in
+  `fixtures/snapshot.sample.json` nachziehen — `scripts/content/content.test.ts`
+  prüft, dass beide synchron bleiben.
 - `scripts/generate-snapshot.ts` — Snapshot-Generator (läuft nur lokal auf Konrads Mac)
 - `fixtures/snapshot.sample.json` — Beispiel-Snapshot für lokale Entwicklung/Tests
 

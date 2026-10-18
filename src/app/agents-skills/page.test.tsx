@@ -19,7 +19,7 @@ describe("AgentsSkillsPage", () => {
     for (const skill of fixtureSnapshot.skills) {
       expect(screen.getByText(skill.name)).toBeInTheDocument();
     }
-    for (const rule of fixtureSnapshot.rules) {
+    for (const rule of (fixtureSnapshot as Snapshot).rules) {
       expect(screen.getByText(rule.title)).toBeInTheDocument();
     }
   });
@@ -52,6 +52,14 @@ describe("AgentsSkillsPage", () => {
 
     expect(screen.getByText("no-example-skill")).toBeInTheDocument();
     expect(screen.queryByText(/beispiel:/i)).not.toBeInTheDocument();
+  });
+
+  it("explains where conventions live when the snapshot has no rules", async () => {
+    getSnapshot.mockResolvedValue({ ...fixtureSnapshot, rules: [] } as Snapshot);
+    render(await AgentsSkillsPage());
+
+    expect(screen.getByRole("heading", { name: "Rules" })).toBeInTheDocument();
+    expect(screen.getByText(/keine rules/i)).toHaveTextContent(/CLAUDE\.md/);
   });
 
   it("shows the calm fallback message when there is no snapshot", async () => {

@@ -5,31 +5,18 @@
  * which frontmatter doesn't carry.
  */
 export const agentExamples: Record<string, string> = {
-  orchestrator:
-    "Konrad: \"Baue ein Punkte-System für Waldbingo, mit DB-Schema, API und UI.\" " +
-    "→ orchestrator zerlegt in Schema (data-analyst) → Tests (tester) → " +
-    "Implementierung (implementer) → Review (reviewer) → Docs (docs) und " +
-    "sequenziert die Übergaben.",
-  planner:
-    "Nach einer freigegebenen Spec (specs/punkte-system.md): planner liest sie " +
-    "und liefert Datei-für-Datei-Plan inkl. Interfaces & Contracts (z. B. " +
-    "`POST /api/scores` Request/Response-Shape), damit tester und implementer " +
-    "unabhängig voneinander daran arbeiten können.",
   tester:
-    "Aus dem Plan-Kontrakt `POST /api/scores → { points: number }` schreibt " +
-    "tester zuerst den fehlschlagenden Request-Test (Rot), ohne die " +
-    "Implementierung selbst zu schreiben — bestätigt, dass er aus dem " +
-    "richtigen Grund fehlschlägt (404, nicht Syntaxfehler).",
-  implementer:
-    "Nimmt tester's roten Test für `POST /api/scores`, verifiziert den " +
-    "Fehlgrund, implementiert den Endpoint exakt gegen die Plan-Kontrakte, " +
-    "bis der Test grün ist, refactored danach.",
+    "Feature mit zwei unabhängigen Slices (API + UI): Während die Hauptsession " +
+    "`POST /api/scores` test-first umsetzt, schreibt tester im eigenen Worktree " +
+    "die fehlschlagenden Tests für die UI-Slice aus deren Akzeptanzkriterien " +
+    "und bestätigt Rot aus dem richtigen Grund — Produktionslogik schreibt er nie.",
   reviewer:
-    "Vor dem Merge eines PR: reviewer liest den Diff gegen die " +
-    "Akzeptanzkriterien der Spec und meldet reale Defekte (z. B. fehlende " +
-    "Validierung, falsche Fehlerbehandlung) — schreibt selbst nichts um.",
+    "Nach grünen Gates im Feature-Ablauf: reviewer prüft den Diff mit frischem " +
+    "Kontext gegen die Akzeptanzkriterien und meldet reale Defekte (z. B. " +
+    "fehlende Validierung, falsche Fehlerbehandlung) — schreibt selbst nichts um.",
   security:
-    "Vor dem Ausrollen eines neuen `/api/auth/login`-Endpoints: security prüft " +
+    "Zusätzlich zum reviewer, wenn ein Diff Auth, Nutzereingaben, Geld, Secrets " +
+    "oder externe APIs berührt — z. B. ein neuer `/api/auth/login`-Endpoint: security prüft " +
     "Auth-Flow, Input-Validierung, Secret-Handling und meldet Findings mit " +
     "Schweregrad und Fix-Vorschlag.",
   "data-analyst":
@@ -37,7 +24,7 @@ export const agentExamples: Record<string, string> = {
     "data-analyst plant die Migration (Doctrine/Prisma), inkl. Reihenfolge " +
     "und Rollback-Pfad, schreibt aber keine Feature-Logik.",
   docs:
-    "Nach einem gemergten Feature: docs aktualisiert README/CHANGELOG und " +
+    "Nach einem Feature mit großem Doku-Umfang: docs aktualisiert README/CHANGELOG und " +
     "Docblocks, damit sie mit dem tatsächlichen Verhalten übereinstimmen — " +
     "im bestehenden Ton/Struktur des Projekts.",
 };
