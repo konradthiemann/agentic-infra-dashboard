@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-07T11:29:45.380Z",
+  "generatedAt": "2026-10-18T07:01:24.823Z",
   "workspace": {
     "repoCount": 13,
-    "agentCount": 8,
+    "agentCount": 5,
     "skillCount": 9
   },
   "repos": [
@@ -22,17 +22,17 @@
       "defaultBranch": "main",
       "hasOwnClaudeConfig": true,
       "lastCommit": {
-        "sha": "32c75bd6e3537f6b92963353c5981fb7da99df86",
-        "message": "fix(recurring): exclude the public demo account from auto-booking (#75)",
-        "date": "2026-09-07T20:32:40+02:00",
+        "sha": "6662cdb4947008073ec5b165b9d26413d510fab1",
+        "message": "chore: Features aus gestapelten PRs #79-#85 auf main bringen (#86)",
+        "date": "2026-10-07T17:16:40+02:00",
         "author": "Konrad Thiemann"
       },
       "ci": {
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-10-07T07:14:31Z",
-        "url": "https://github.com/konradthiemann/Doewe/actions/runs/37585834999"
+        "updatedAt": "2026-10-17T19:22:16Z",
+        "url": "https://github.com/konradthiemann/Doewe/actions/runs/39061943235"
       }
     },
     {
@@ -84,8 +84,8 @@
         "workflow": "Keep Supabase awake",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-10-04T11:28:45Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/37198865773"
+        "updatedAt": "2026-10-16T10:18:23Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/38886333159"
       }
     },
     {
@@ -108,10 +108,10 @@
       },
       "ci": {
         "workflow": "CI",
-        "status": "completed",
-        "conclusion": "success",
-        "updatedAt": "2026-10-04T20:45:53Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/37233162767"
+        "status": "in_progress",
+        "conclusion": "",
+        "updatedAt": "2026-10-18T06:59:55Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/39106017576"
       }
     },
     {
@@ -282,8 +282,8 @@
         "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-10-07T11:06:10Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/37611799123"
+        "updatedAt": "2026-10-18T04:30:00Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/39097291740"
       }
     },
     {
@@ -365,50 +365,6 @@
       "example": "Nach einem gemergten Feature: docs aktualisiert README/CHANGELOG und Docblocks, damit sie mit dem tatsächlichen Verhalten übereinstimmen — im bestehenden Ton/Struktur des Projekts."
     },
     {
-      "name": "implementer",
-      "description": "Use to write or refactor production code once a plan exists. Implements layer by layer, matches surrounding code, keeps diffs small and focused, and runs the project's quality gates before declaring done.",
-      "tools": [
-        "Read",
-        "Write",
-        "Edit",
-        "Grep",
-        "Glob",
-        "Bash",
-        "TodoWrite"
-      ],
-      "model": "sonnet",
-      "example": "Nimmt tester's roten Test für `POST /api/scores`, verifiziert den Fehlgrund, implementiert den Endpoint exakt gegen die Plan-Kontrakte, bis der Test grün ist, refactored danach."
-    },
-    {
-      "name": "orchestrator",
-      "description": "Use for any non-trivial request that spans multiple layers (schema/DB + API + UI + tests + docs) or needs coordination across specialists. It decomposes the feature, decides which specialist handles each part, sequences the work, and integrates the results. Start here for multi-file features.",
-      "tools": [
-        "Read",
-        "Grep",
-        "Glob",
-        "Bash",
-        "WebFetch",
-        "WebSearch",
-        "TodoWrite"
-      ],
-      "model": "sonnet",
-      "example": "Konrad: \"Baue ein Punkte-System für Waldbingo, mit DB-Schema, API und UI.\" → orchestrator zerlegt in Schema (data-analyst) → Tests (tester) → Implementierung (implementer) → Review (reviewer) → Docs (docs) und sequenziert die Übergaben."
-    },
-    {
-      "name": "planner",
-      "description": "Use before implementing any non-trivial feature or refactor. Produces a detailed, layer-by-layer implementation plan WITHOUT writing code — affected files, change order, risks, and a Definition of Done. The implementer executes what the planner designs.",
-      "tools": [
-        "Read",
-        "Grep",
-        "Glob",
-        "Bash",
-        "WebFetch",
-        "WebSearch"
-      ],
-      "model": "opus",
-      "example": "Nach einer freigegebenen Spec (specs/punkte-system.md): planner liest sie und liefert Datei-für-Datei-Plan inkl. Interfaces & Contracts (z. B. `POST /api/scores` Request/Response-Shape), damit tester und implementer unabhängig voneinander daran arbeiten können."
-    },
-    {
       "name": "reviewer",
       "description": "Use to review a diff, PR, or set of changes for correctness, security, and convention adherence. Catches real defects — not style nitpicks. Read-only; it reports findings, it does not edit.",
       "tools": [
@@ -435,7 +391,7 @@
     },
     {
       "name": "tester",
-      "description": "Use to write tests BEFORE production code exists, from a spec's acceptance criteria and a planner's interface contracts. Confirms each test fails for the right reason (red), then hands off to the implementer to make it pass. Never writes production logic.",
+      "description": "Use to write failing tests for an independent slice of a planned feature, from its acceptance criteria and interface contracts, while the main session works on another slice. Confirms red for the right reason. Never writes production logic.",
       "tools": [
         "Read",
         "Grep",
@@ -469,8 +425,8 @@
     },
     {
       "name": "feature",
-      "description": "Verkettet den kompletten Feature-Ablauf — Spec, Plan, Tests (tester), Implementierung (implementer), Quality-Gates, Review, ggf. Docs — als ein wiederkehrender Fluss statt Einzelschritte manuell aufzurufen. Nutzen bei \"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen.",
-      "triggerHint": "\"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen.",
+      "description": "Feature-Ablauf im Workspace — Anforderungen klären, planen, test-first umsetzen, Gates, unabhängiger Review, Doku. Nutzen bei \"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen. Hat ein Projekt einen eigenen /feature-Ablauf (z. B. SK8), gilt dieser.",
+      "triggerHint": "\"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen. Hat ein Projekt einen eigenen /feature-Ablauf (z. B. SK8), gilt dieser.",
       "example": "Konrad: \"baue ein Login mit Magic-Link\" → verkettet automatisch Spec → Plan → tester (Rot) → implementer (Grün) → Quality-Gates → Review → ggf. Docs, statt jeden Schritt einzeln anzustoßen."
     },
     {
@@ -481,7 +437,7 @@
     },
     {
       "name": "spec",
-      "description": "Erstellt eine Spec (Problem/Ziel, User Stories, Akzeptanzkriterien, Out of Scope) für ein Feature, bevor geplant oder implementiert wird — der erste Schritt von Spec-Driven Development. Nutzen bei \"spec\", \"Anforderungen aufschreiben\", \"spec-driven\", \"was soll das genau tun\", \"/spec\".",
+      "description": "Erstellt eine Spec (Problem/Ziel, User Stories, Akzeptanzkriterien, Out of Scope) für ein Feature, bevor geplant oder implementiert wird. Nutzen bei \"spec\", \"Anforderungen aufschreiben\", \"spec-driven\", \"was soll das genau tun\", \"/spec\".",
       "triggerHint": "\"spec\", \"Anforderungen aufschreiben\", \"spec-driven\", \"was soll das genau tun\", \"/spec\".",
       "example": "Konrad: \"/spec Punkte-System für Waldbingo\" → fragt gezielt nach Zielgruppe/Randbedingungen, schreibt `specs/punkte-system.md` mit Akzeptanzkriterien, legt Konrad zur Freigabe vor, bevor geplant wird."
     },
@@ -504,38 +460,7 @@
       "example": "Konrad: \"das wars für heute\" → prüft offene Änderungen/PRs je Repo, räumt Worktrees/Scratch-Dateien auf, zieht neue Erkenntnisse in CLAUDE.md/Memory nach und fasst zusammen, was als Nächstes ansteht."
     }
   ],
-  "rules": [
-    {
-      "slug": "code-style",
-      "title": "Code-Style (polyglott)",
-      "summary": "Allgemeine, sprachübergreifende Code-Konventionen."
-    },
-    {
-      "slug": "git-and-commits",
-      "title": "Git & Commits",
-      "summary": "Git-Branch-, Commit- und PR-Konventionen für den Workspace."
-    },
-    {
-      "slug": "security-and-secrets",
-      "title": "Sicherheit & Secrets",
-      "summary": "Umgang mit Secrets, .env und öffentlichen Repos."
-    },
-    {
-      "slug": "spec-driven-development",
-      "title": "Spec-Driven Development",
-      "summary": "Bevor bei einem nicht-trivialen Feature geplant oder implementiert wird, wird zuerst spezifiziert was gebaut werden soll — getrennt von wie (das ist der Plan-Schritt, siehe CLAUDE.md → Plan-Mode)."
-    },
-    {
-      "slug": "tdd",
-      "title": "Test-Driven Development",
-      "summary": "Rot-Grün-Refactor ist Pflicht für neues Verhalten und Bugfixes — Tests kommen vor dem Implementierungscode, nicht danach."
-    },
-    {
-      "slug": "worktrees",
-      "title": "Worktrees",
-      "summary": "Worktree-Workflow für parallele Arbeit."
-    }
-  ],
+  "rules": [],
   "hooks": [
     {
       "name": "git-safety",
@@ -951,20 +876,8 @@
   "monitoring": {
     "tddGate": {
       "windowDays": 30,
-      "totalBlocks": 129,
+      "totalBlocks": 120,
       "byRepo": {
-        "tmp.jE2c0I7iXT": 1,
-        "tmp.4vLqfOcqqS": 1,
-        "tmp.wrm9SzkwDs": 1,
-        "tmp.Wzg9UzJsib": 1,
-        "tmp.3E22Bc5gZW": 1,
-        "tmp.4zPwt49wxt": 1,
-        "tmp.Y0bmkMThOk": 1,
-        "tmp.H2eeC8wdUs": 1,
-        "tmp.4oRQCg1Zgj": 1,
-        "tmp.nrxHAqrPe3": 1,
-        "tmp.H5mo1LflJT": 1,
-        "tmp.MbuFz457ax": 1,
         "tmp.apc1vy0QqV": 1,
         "tmp.uXLgRkAEdt": 1,
         "tmp.ckfrVkcqXs": 1,
@@ -1081,12 +994,33 @@
         "tmp.APpZc0rgFS": 1,
         "tmp.iqDNx5JgBz": 1,
         "tmp.JtXJMRY6ae": 1,
-        "tmp.IrGNC8MqlA": 1
+        "tmp.IrGNC8MqlA": 1,
+        "tmp.OZSSQbxZaJ": 1,
+        "tmp.f7dIKENKuW": 1,
+        "tmp.9Qtcs64bBA": 1
       },
       "byGate": {
-        "docs": 129
+        "docs": 120
       },
       "recentEvents": [
+        {
+          "timestamp": "2026-10-18T06:59:21.345147Z",
+          "repo": "tmp.9Qtcs64bBA",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
+        {
+          "timestamp": "2026-10-18T06:59:18.349951Z",
+          "repo": "tmp.f7dIKENKuW",
+          "gate": "docs",
+          "command": "git commit --amend"
+        },
+        {
+          "timestamp": "2026-10-18T06:59:18.044778Z",
+          "repo": "tmp.OZSSQbxZaJ",
+          "gate": "docs",
+          "command": "git commit -m test"
+        },
         {
           "timestamp": "2026-09-29T09:47:01.615415Z",
           "repo": "tmp.IrGNC8MqlA",
@@ -1188,24 +1122,6 @@
           "repo": "tmp.w9uAQB8U0I",
           "gate": "docs",
           "command": "git commit --amend"
-        },
-        {
-          "timestamp": "2026-09-29T09:35:13.880694Z",
-          "repo": "tmp.LJ6SlsFj3f",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-29T09:31:59.922644Z",
-          "repo": "tmp.zNwWSsK9xq",
-          "gate": "docs",
-          "command": "git commit -m test"
-        },
-        {
-          "timestamp": "2026-09-29T09:31:57.209044Z",
-          "repo": "tmp.7RJtQi0eCf",
-          "gate": "docs",
-          "command": "git commit --amend"
         }
       ]
     },
@@ -1214,8 +1130,8 @@
         "workflow": "CI",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-10-07T07:14:31Z",
-        "url": "https://github.com/konradthiemann/Doewe/actions/runs/37585834999",
+        "updatedAt": "2026-10-17T19:22:16Z",
+        "url": "https://github.com/konradthiemann/Doewe/actions/runs/39061943235",
         "repo": "Doewe"
       },
       {
@@ -1230,16 +1146,16 @@
         "workflow": "Keep Supabase awake",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-10-04T11:28:45Z",
-        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/37198865773",
+        "updatedAt": "2026-10-16T10:18:23Z",
+        "url": "https://github.com/konradthiemann/Pok-mon-TCG-Prize-Checker/actions/runs/38886333159",
         "repo": "Pok-mon-TCG-Prize-Checker"
       },
       {
         "workflow": "CI",
-        "status": "completed",
-        "conclusion": "success",
-        "updatedAt": "2026-10-04T20:45:53Z",
-        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/37233162767",
+        "status": "in_progress",
+        "conclusion": "",
+        "updatedAt": "2026-10-18T06:59:55Z",
+        "url": "https://github.com/konradthiemann/Pokekon/actions/runs/39106017576",
         "repo": "Pokekon"
       },
       {
@@ -1278,8 +1194,8 @@
         "workflow": "Cron - Railway Costs",
         "status": "completed",
         "conclusion": "success",
-        "updatedAt": "2026-10-07T11:06:10Z",
-        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/37611799123",
+        "updatedAt": "2026-10-18T04:30:00Z",
+        "url": "https://github.com/konradthiemann/kassenbuch/actions/runs/39097291740",
         "repo": "kassenbuch"
       },
       {
