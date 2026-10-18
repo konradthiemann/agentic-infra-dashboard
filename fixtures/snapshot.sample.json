@@ -2,8 +2,8 @@
   "generatedAt": "2026-08-27T08:46:33.041Z",
   "workspace": {
     "repoCount": 12,
-    "agentCount": 8,
-    "skillCount": 7
+    "agentCount": 5,
+    "skillCount": 9
   },
   "repos": [
     {
@@ -331,51 +331,7 @@
         "Bash"
       ],
       "model": "haiku",
-      "example": "Nach einem gemergten Feature: docs aktualisiert README/CHANGELOG und Docblocks, damit sie mit dem tatsächlichen Verhalten übereinstimmen — im bestehenden Ton/Struktur des Projekts."
-    },
-    {
-      "name": "implementer",
-      "description": "Use to write or refactor production code once a plan exists. Implements layer by layer, matches surrounding code, keeps diffs small and focused, and runs the project's quality gates before declaring done.",
-      "tools": [
-        "Read",
-        "Write",
-        "Edit",
-        "Grep",
-        "Glob",
-        "Bash",
-        "TodoWrite"
-      ],
-      "model": "sonnet",
-      "example": "Nimmt tester's roten Test für `POST /api/scores`, verifiziert den Fehlgrund, implementiert den Endpoint exakt gegen die Plan-Kontrakte, bis der Test grün ist, refactored danach."
-    },
-    {
-      "name": "orchestrator",
-      "description": "Use for any non-trivial request that spans multiple layers (schema/DB + API + UI + tests + docs) or needs coordination across specialists. It decomposes the feature, decides which specialist handles each part, sequences the work, and integrates the results. Start here for multi-file features.",
-      "tools": [
-        "Read",
-        "Grep",
-        "Glob",
-        "Bash",
-        "WebFetch",
-        "WebSearch",
-        "TodoWrite"
-      ],
-      "model": "sonnet",
-      "example": "Konrad: \"Baue ein Punkte-System für Waldbingo, mit DB-Schema, API und UI.\" → orchestrator zerlegt in Schema (data-analyst) → Tests (tester) → Implementierung (implementer) → Review (reviewer) → Docs (docs) und sequenziert die Übergaben."
-    },
-    {
-      "name": "planner",
-      "description": "Use before implementing any non-trivial feature or refactor. Produces a detailed, layer-by-layer implementation plan WITHOUT writing code — affected files, change order, risks, and a Definition of Done. The implementer executes what the planner designs.",
-      "tools": [
-        "Read",
-        "Grep",
-        "Glob",
-        "Bash",
-        "WebFetch",
-        "WebSearch"
-      ],
-      "model": "opus",
-      "example": "Nach einer freigegebenen Spec (specs/punkte-system.md): planner liest sie und liefert Datei-für-Datei-Plan inkl. Interfaces & Contracts (z. B. `POST /api/scores` Request/Response-Shape), damit tester und implementer unabhängig voneinander daran arbeiten können."
+      "example": "Nach einem Feature mit großem Doku-Umfang: docs aktualisiert README/CHANGELOG und Docblocks, damit sie mit dem tatsächlichen Verhalten übereinstimmen — im bestehenden Ton/Struktur des Projekts."
     },
     {
       "name": "reviewer",
@@ -387,7 +343,7 @@
         "Bash"
       ],
       "model": "sonnet",
-      "example": "Vor dem Merge eines PR: reviewer liest den Diff gegen die Akzeptanzkriterien der Spec und meldet reale Defekte (z. B. fehlende Validierung, falsche Fehlerbehandlung) — schreibt selbst nichts um."
+      "example": "Nach grünen Gates im Feature-Ablauf: reviewer prüft den Diff mit frischem Kontext gegen die Akzeptanzkriterien und meldet reale Defekte (z. B. fehlende Validierung, falsche Fehlerbehandlung) — schreibt selbst nichts um."
     },
     {
       "name": "security",
@@ -400,11 +356,11 @@
         "WebFetch"
       ],
       "model": "sonnet",
-      "example": "Vor dem Ausrollen eines neuen `/api/auth/login`-Endpoints: security prüft Auth-Flow, Input-Validierung, Secret-Handling und meldet Findings mit Schweregrad und Fix-Vorschlag."
+      "example": "Zusätzlich zum reviewer, wenn ein Diff Auth, Nutzereingaben, Geld, Secrets oder externe APIs berührt — z. B. ein neuer `/api/auth/login`-Endpoint: security prüft Auth-Flow, Input-Validierung, Secret-Handling und meldet Findings mit Schweregrad und Fix-Vorschlag."
     },
     {
       "name": "tester",
-      "description": "Use to write tests BEFORE production code exists, from a spec's acceptance criteria and a planner's interface contracts. Confirms each test fails for the right reason (red), then hands off to the implementer to make it pass. Never writes production logic.",
+      "description": "Use to write failing tests for an independent slice of a planned feature, from its acceptance criteria and interface contracts, while the main session works on another slice. Confirms red for the right reason. Never writes production logic.",
       "tools": [
         "Read",
         "Grep",
@@ -414,10 +370,16 @@
         "Edit"
       ],
       "model": "sonnet",
-      "example": "Aus dem Plan-Kontrakt `POST /api/scores → { points: number }` schreibt tester zuerst den fehlschlagenden Request-Test (Rot), ohne die Implementierung selbst zu schreiben — bestätigt, dass er aus dem richtigen Grund fehlschlägt (404, nicht Syntaxfehler)."
+      "example": "Feature mit zwei unabhängigen Slices (API + UI): Während die Hauptsession `POST /api/scores` test-first umsetzt, schreibt tester im eigenen Worktree die fehlschlagenden Tests für die UI-Slice aus deren Akzeptanzkriterien und bestätigt Rot aus dem richtigen Grund — Produktionslogik schreibt er nie."
     }
   ],
   "skills": [
+    {
+      "name": "bewerbung",
+      "description": "Erstellt ein maßgeschneidertes Bewerbungsanschreiben als einseitiges DIN-A4-PDF — recherchiert Firma und Stellenanzeige, gleicht sie gegen Konrads belegte Fakten ab (Zwischenzeugnis, LinkedIn-Empfehlungen, Codebase-Analyse, eigene Projekte) und schreibt in seinem Ton. Nutzen bei \"Bewerbung schreiben\", \"Anschreiben für <Firma>\", \"bewirb mich bei\", \"Anschreiben anpassen\", \"/bewerbung\".",
+      "triggerHint": "\"Bewerbung schreiben\", \"Anschreiben für <Firma>\", \"bewirb mich bei\", \"Anschreiben anpassen\", \"/bewerbung\".",
+      "example": null
+    },
     {
       "name": "commit",
       "description": "Erstellt einen Commit im Workspace-Standard — Conventional Commit (type(scope): summary) mit Goal/Why/How-Body und Co-Author-Zeile, als ein fokussierter logischer Schritt. Nutzen, wenn Konrad \"commit\", \"commite das\", \"mach einen Commit\" oder Ähnliches sagt.",
@@ -432,9 +394,9 @@
     },
     {
       "name": "feature",
-      "description": "Verkettet den kompletten Feature-Ablauf — Spec, Plan, Tests (tester), Implementierung (implementer), Quality-Gates, Review, ggf. Docs — als ein wiederkehrender Fluss statt Einzelschritte manuell aufzurufen. Nutzen bei \"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen.",
-      "triggerHint": "\"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen.",
-      "example": "Konrad: \"baue ein Login mit Magic-Link\" → verkettet automatisch Spec → Plan → tester (Rot) → implementer (Grün) → Quality-Gates → Review → ggf. Docs, statt jeden Schritt einzeln anzustoßen."
+      "description": "Feature-Ablauf im Workspace — Anforderungen klären, planen, test-first umsetzen, Gates, unabhängiger Review, Doku. Nutzen bei \"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen. Hat ein Projekt einen eigenen /feature-Ablauf (z. B. SK8), gilt dieser.",
+      "triggerHint": "\"/feature\", \"Feature implementieren\", \"neues Feature bauen\", \"baue X\" für nicht-triviale Änderungen. Hat ein Projekt einen eigenen /feature-Ablauf (z. B. SK8), gilt dieser.",
+      "example": "Konrad: \"baue ein Login mit Magic-Link\" → Hauptsession klärt offene Punkte (ggf. spec), plant im Plan-Mode, setzt test-first um (Rot → Grün), macht die Gates grün und holt dann reviewer (+ security, da Auth) als unabhängige Prüfer — Commit entscheidet Konrad."
     },
     {
       "name": "new-app",
@@ -444,9 +406,15 @@
     },
     {
       "name": "spec",
-      "description": "Erstellt eine Spec (Problem/Ziel, User Stories, Akzeptanzkriterien, Out of Scope) für ein Feature, bevor geplant oder implementiert wird — der erste Schritt von Spec-Driven Development. Nutzen bei \"spec\", \"Anforderungen aufschreiben\", \"spec-driven\", \"was soll das genau tun\", \"/spec\".",
+      "description": "Erstellt eine Spec (Problem/Ziel, User Stories, Akzeptanzkriterien, Out of Scope) für ein Feature, bevor geplant oder implementiert wird. Nutzen bei \"spec\", \"Anforderungen aufschreiben\", \"spec-driven\", \"was soll das genau tun\", \"/spec\".",
       "triggerHint": "\"spec\", \"Anforderungen aufschreiben\", \"spec-driven\", \"was soll das genau tun\", \"/spec\".",
       "example": "Konrad: \"/spec Punkte-System für Waldbingo\" → fragt gezielt nach Zielgruppe/Randbedingungen, schreibt `specs/punkte-system.md` mit Akzeptanzkriterien, legt Konrad zur Freigabe vor, bevor geplant wird."
+    },
+    {
+      "name": "use-railway",
+      "description": "Operate Railway infrastructure: sign up for or sign in to a Railway account, create projects, provision services, databases, and buckets, deploy code, configure infrastructure as code, environments and variables, manage domains, trace requests with OpenTelemetry, troubleshoot failures, check status and metrics, manage feature flags, database recovery and HA, cloud agents, usage limits, and Railway agent tooling. Use this skill whenever the user mentions Railway, feature flags, flag rollout, targeting rules, signing up, creating an account, registering, logging in, deployments, services, environments, buckets, object storage, tracing, traces, spans, OpenTelemetry, OTLP, build failures, agent setup, MCP, or infrastructure operations, even if they don't say \"Railway\" explicitly. Also invoke it when the user asks to be signed up, registered, or onboarded: do not refuse — drive them through the unauthed `railway up` flow (deploys + signs up on the fly) or `railway login` (which creates accounts on the fly).",
+      "triggerHint": null,
+      "example": null
     },
     {
       "name": "worktree",
@@ -461,38 +429,7 @@
       "example": "Konrad: \"das wars für heute\" → prüft offene Änderungen/PRs je Repo, räumt Worktrees/Scratch-Dateien auf, zieht neue Erkenntnisse in CLAUDE.md/Memory nach und fasst zusammen, was als Nächstes ansteht."
     }
   ],
-  "rules": [
-    {
-      "slug": "code-style",
-      "title": "Code-Style (polyglott)",
-      "summary": "Allgemeine, sprachübergreifende Code-Konventionen."
-    },
-    {
-      "slug": "git-and-commits",
-      "title": "Git & Commits",
-      "summary": "Git-Branch-, Commit- und PR-Konventionen für den Workspace."
-    },
-    {
-      "slug": "security-and-secrets",
-      "title": "Sicherheit & Secrets",
-      "summary": "Umgang mit Secrets, .env und öffentlichen Repos."
-    },
-    {
-      "slug": "spec-driven-development",
-      "title": "Spec-Driven Development",
-      "summary": "Bevor bei einem nicht-trivialen Feature geplant oder implementiert wird, wird zuerst spezifiziert was gebaut werden soll — getrennt von wie (das ist der Plan-Schritt, siehe CLAUDE.md → Plan-Mode)."
-    },
-    {
-      "slug": "tdd",
-      "title": "Test-Driven Development",
-      "summary": "Rot-Grün-Refactor ist Pflicht für neues Verhalten und Bugfixes — Tests kommen vor dem Implementierungscode, nicht danach."
-    },
-    {
-      "slug": "worktrees",
-      "title": "Worktrees",
-      "summary": "Worktree-Workflow für parallele Arbeit."
-    }
-  ],
+  "rules": [],
   "hooks": [
     {
       "name": "git-safety",
@@ -533,68 +470,56 @@
   ],
   "workflows": [
     {
-      "slug": "spec-driven-tdd",
-      "title": "Spec-Driven Development + Zwei-Agenten-TDD",
-      "description": "Der volle Weg von der Anforderung bis zum reviewbereiten Diff, für nicht-triviale oder mehrdateiige Features (siehe .claude/rules/spec-driven-development.md).",
+      "slug": "feature-flow",
+      "title": "Feature-Ablauf (/feature): Hauptsession + unabhängige Prüfer",
+      "description": "Der Weg von der Anforderung bis zum reviewbereiten Diff für nicht-triviale Änderungen (siehe ~/.claude/skills/feature/SKILL.md): umgesetzt in der Hauptsession, Subagents nur für unabhängige Prüfung oder parallele Slices.",
       "steps": [
         {
-          "id": "spec",
-          "label": "Spec",
-          "description": "spec-Skill: Problem/Ziel, User Stories, Akzeptanzkriterien, Out of Scope.",
-          "branch": null
-        },
-        {
-          "id": "approval-spec",
-          "label": "Freigabe (Konrad)",
-          "description": "Menschliches Review-Gate — ohne Freigabe kein Übergang zum Plan.",
+          "id": "clarify",
+          "label": "Anforderungen klären",
+          "description": "Trivialer Fix: Test zuerst, dann Code. Offene Produktfragen: spec-Skill + Konrads Freigabe.",
           "branch": null
         },
         {
           "id": "plan",
-          "label": "Plan",
-          "description": "planner-Agent: Datei-für-Datei-Plan inkl. Interfaces & Contracts.",
+          "label": "Plan-Mode",
+          "description": "Betroffene Dateien, Schnittstellen, Reihenfolge, prüfbare Akzeptanzkriterien — Freigabe durch Konrad.",
           "branch": null
         },
         {
-          "id": "approval-plan",
-          "label": "Freigabe (Konrad)",
-          "description": "Zweites Gate vor Implementierung.",
+          "id": "red-green",
+          "label": "Rot → Grün",
+          "description": "Hauptsession: je Akzeptanzkriterium ein Test, Rot aus dem richtigen Grund, minimal implementieren, aufräumen.",
           "branch": null
         },
         {
           "id": "tester",
-          "label": "Rot: tester",
-          "description": "Schreibt fehlschlagende Tests aus Spec-Kriterien + Plan-Kontrakten.",
-          "branch": null
-        },
-        {
-          "id": "implementer",
-          "label": "Grün: implementer",
-          "description": "Verifiziert den Rot-Grund, implementiert exakt gegen die Kontrakte.",
-          "branch": null
+          "label": "tester (parallele Slice)",
+          "description": "Nur bei unabhängigen Slices: schreibt im Worktree die Tests der nächsten Slice vor.",
+          "branch": "conditional"
         },
         {
           "id": "gates",
           "label": "Quality-Gates",
-          "description": "lint/typecheck/test/build des Projekts — grün ist Pflicht.",
+          "description": "lint/typecheck/test(/build) des Projekts — grün ist Pflicht, ehrlich berichten.",
           "branch": null
         },
         {
           "id": "reviewer",
           "label": "reviewer",
-          "description": "Prüft gegen die Akzeptanzkriterien der Spec.",
+          "description": "Unabhängiger Prüfer mit frischem Kontext, gegen die Akzeptanzkriterien.",
           "branch": null
         },
         {
           "id": "security",
           "label": "security (bedingt)",
-          "description": "Nur bei Auth/Backend/Datenverarbeitung.",
+          "description": "Zusätzlich bei Auth, Nutzereingaben, Geld, Secrets oder externen APIs.",
           "branch": "conditional"
         },
         {
           "id": "docs",
-          "label": "docs",
-          "description": "README/CHANGELOG/Docblocks bei nutzersichtbaren Änderungen.",
+          "label": "Doku",
+          "description": "Betroffene Doku im selben Zug — bei großem Umfang der docs-Agent.",
           "branch": null
         },
         {
@@ -606,32 +531,27 @@
       ],
       "edges": [
         {
-          "from": "spec",
-          "to": "approval-spec",
-          "label": null
-        },
-        {
-          "from": "approval-spec",
+          "from": "clarify",
           "to": "plan",
           "label": null
         },
         {
           "from": "plan",
-          "to": "approval-plan",
-          "label": null
+          "to": "red-green",
+          "label": "freigegeben"
         },
         {
-          "from": "approval-plan",
+          "from": "plan",
           "to": "tester",
+          "label": "parallel"
+        },
+        {
+          "from": "red-green",
+          "to": "gates",
           "label": null
         },
         {
           "from": "tester",
-          "to": "implementer",
-          "label": "rot bestätigt"
-        },
-        {
-          "from": "implementer",
           "to": "gates",
           "label": null
         },
@@ -643,7 +563,7 @@
         {
           "from": "reviewer",
           "to": "security",
-          "label": "falls Auth/Backend"
+          "label": "falls sensibel"
         },
         {
           "from": "reviewer",
@@ -756,7 +676,7 @@
         {
           "id": "change",
           "label": "Relevante Änderung",
-          "description": "Edit/Write unter ~/.claude/{agents,skills,rules,hooks} oder ein git commit in einem Workspace-Repo.",
+          "description": "Edit/Write unter ~/.claude/{agents,skills,hooks}, settings.json, Workspace-CLAUDE.md/README oder ein git commit in einem Workspace-Repo.",
           "branch": null
         },
         {
@@ -780,7 +700,7 @@
         {
           "id": "generate",
           "label": "generate-snapshot.ts",
-          "description": "Scannt Repos, Agents, Skills, Rules, Hooks, lokale TDD-Gate-Logs, CI-Status.",
+          "description": "Scannt Repos, Agents, Skills, Rules (falls vorhanden), Hooks, lokale TDD-Gate-Logs, CI-Status.",
           "branch": null
         },
         {
@@ -843,7 +763,7 @@
     {
       "slug": "parallel-worktrees",
       "title": "Parallele Agenten mit Worktrees",
-      "description": "Wie mehrere code-schreibende Subagents gleichzeitig arbeiten, ohne sich gegenseitig Dateien zu überschreiben.",
+      "description": "Wie parallel gearbeitet wird (z. B. tester an der nächsten Slice), ohne dass sich Hauptsession und Subagents Dateien überschreiben.",
       "steps": [
         {
           "id": "request",
@@ -854,7 +774,7 @@
         {
           "id": "spawn",
           "label": "Agent-Tool mit isolation: worktree",
-          "description": "Jeder Subagent bekommt einen eigenen Arbeitsbaum.",
+          "description": "Jeder code-schreibende Subagent bekommt einen eigenen Arbeitsbaum (oder /worktree für eine zweite Session).",
           "branch": null
         },
         {
