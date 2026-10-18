@@ -400,7 +400,7 @@
     },
     {
       "name": "new-app",
-      "description": "Gerüst für ein neues App-/Projekt-Repo im Workspace-Standard — README, .gitignore, .env.example, CI, .claude/ (CLAUDE.md + Rules), Conventional-Commit-Setup. Nutzen bei \"neue App\", \"neues Projekt anlegen\", \"scaffold\", \"neues Repo\".",
+      "description": "Gerüst für ein neues App-/Projekt-Repo im Workspace-Standard — README, .gitignore, .env.example, CI, schlanke CLAUDE.md, Conventional-Commit-Setup. Nutzen bei \"neue App\", \"neues Projekt anlegen\", \"scaffold\", \"neues Repo\".",
       "triggerHint": "\"neue App\", \"neues Projekt anlegen\", \"scaffold\", \"neues Repo\".",
       "example": "Konrad: \"neues Projekt für einen Rezept-Planer\" → legt `~/Softwareentwicklung/rezept-planer` an mit README, .gitignore, CLAUDE.md, CI-Workflow und GitHub-Repo — Setup wie bei bestehenden Apps."
     },
