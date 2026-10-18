@@ -69,7 +69,7 @@ export default async function AgentsSkillsPage() {
       <div>
         <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">Agents & Skills</h1>
         <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-          Globale Claude-Code-Subagents, Skills und Rules aus <code>~/.claude</code>.
+          Globale Claude-Code-Subagents und Skills aus <code>~/.claude</code>, dazu Workspace-Rules (falls vorhanden).
         </p>
       </div>
 
@@ -93,11 +93,18 @@ export default async function AgentsSkillsPage() {
 
       <section className="flex flex-col gap-4">
         <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">Rules</h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {snapshot.rules.map((rule) => (
-            <RuleCard key={rule.slug} rule={rule} />
-          ))}
-        </div>
+        {snapshot.rules.length === 0 ? (
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+            Keine Rules-Dateien — die Konventionen stehen in der Workspace-<code>CLAUDE.md</code> und
+            in den Skills.
+          </p>
+        ) : (
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {snapshot.rules.map((rule) => (
+              <RuleCard key={rule.slug} rule={rule} />
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );
